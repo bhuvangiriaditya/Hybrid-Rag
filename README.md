@@ -54,7 +54,7 @@ Outputs in `reports/`:
 - `evaluation_results.json`
 - `evaluation_results.csv`
 - `report.html`
-- `report.pdf` (requires `reportlab`)
+- `report.pdf`
 
 Optional flags:
 - `--no-generate` (skip answer generation)
