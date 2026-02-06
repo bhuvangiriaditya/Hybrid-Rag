@@ -1,0 +1,10 @@
+streamlit
+sentence-transformers
+faiss-cpu
+rank_bm25
+transformers
+torch
+numpy
+nltk
+beautifulsoup4
+requests

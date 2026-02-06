@@ -1,0 +1,406 @@
+{
+    "description": "Evaluation questions designed to require hybrid (sparse + dense) retrieval over a Wikipedia-based corpus.",
+    "total_questions": 100,
+    "questions": [
+        {
+            "id": 1,
+            "question": "How does the concept of spacetime curvature explain gravitational attraction without invoking a force?"
+        },
+        {
+            "id": 2,
+            "question": "What experimental evidence supports the existence of particles beyond classical atomic theory?"
+        },
+        {
+            "id": 3,
+            "question": "Why is entropy considered a directional property in physical systems?"
+        },
+        {
+            "id": 4,
+            "question": "How does quantum uncertainty differ fundamentally from classical measurement error?"
+        },
+        {
+            "id": 5,
+            "question": "In what way does electromagnetic radiation transfer energy through a vacuum?"
+        },
+        {
+            "id": 6,
+            "question": "Why are black holes considered thermodynamic objects?"
+        },
+        {
+            "id": 7,
+            "question": "How does nuclear fusion differ from chemical reactions at an energy level?"
+        },
+        {
+            "id": 8,
+            "question": "What role does symmetry play in modern particle physics theories?"
+        },
+        {
+            "id": 9,
+            "question": "How did observations of planetary motion challenge earlier models of gravity?"
+        },
+        {
+            "id": 10,
+            "question": "Why is the speed of light considered a universal constant?"
+        },
+        {
+            "id": 11,
+            "question": "What evidence supports the theory that the universe is expanding rather than static?"
+        },
+        {
+            "id": 12,
+            "question": "How do stellar life cycles contribute to the formation of heavy elements?"
+        },
+        {
+            "id": 13,
+            "question": "Why do tectonic plate boundaries experience higher seismic activity?"
+        },
+        {
+            "id": 14,
+            "question": "How does Earth’s magnetic field protect the atmosphere from solar wind?"
+        },
+        {
+            "id": 15,
+            "question": "What processes regulate long-term climate stability on Earth?"
+        },
+        {
+            "id": 16,
+            "question": "Why is the Sun classified as a main-sequence star?"
+        },
+        {
+            "id": 17,
+            "question": "How does orbital resonance affect planetary systems?"
+        },
+        {
+            "id": 18,
+            "question": "What distinguishes a planet from other celestial bodies?"
+        },
+        {
+            "id": 19,
+            "question": "Why do oceans play a critical role in regulating global temperatures?"
+        },
+        {
+            "id": 20,
+            "question": "How does atmospheric composition influence surface habitability?"
+        },
+        {
+            "id": 21,
+            "question": "How does genetic variation arise in sexually reproducing populations?"
+        },
+        {
+            "id": 22,
+            "question": "Why is DNA replication considered semi-conservative?"
+        },
+        {
+            "id": 23,
+            "question": "What mechanisms allow cells to convert light energy into chemical energy?"
+        },
+        {
+            "id": 24,
+            "question": "How does the immune system distinguish self from non-self?"
+        },
+        {
+            "id": 25,
+            "question": "Why do vaccines not always provide lifetime immunity?"
+        },
+        {
+            "id": 26,
+            "question": "How do mutations contribute to evolutionary adaptation?"
+        },
+        {
+            "id": 27,
+            "question": "What role does cellular respiration play in energy homeostasis?"
+        },
+        {
+            "id": 28,
+            "question": "How does epidemiology differ from clinical medicine in scope?"
+        },
+        {
+            "id": 29,
+            "question": "Why are certain diseases considered multifactorial?"
+        },
+        {
+            "id": 30,
+            "question": "How does public health focus differ from individual medical treatment?"
+        },
+        {
+            "id": 31,
+            "question": "How does working memory differ from long-term memory in function and capacity?"
+        },
+        {
+            "id": 32,
+            "question": "Why is attention considered a limited cognitive resource?"
+        },
+        {
+            "id": 33,
+            "question": "How does neuroplasticity challenge earlier models of brain rigidity?"
+        },
+        {
+            "id": 34,
+            "question": "What distinguishes conscious awareness from unconscious processing?"
+        },
+        {
+            "id": 35,
+            "question": "Why do cognitive biases persist even with rational education?"
+        },
+        {
+            "id": 36,
+            "question": "How does learning differ from mere information acquisition?"
+        },
+        {
+            "id": 37,
+            "question": "What factors influence decision-making under uncertainty?"
+        },
+        {
+            "id": 38,
+            "question": "How does developmental psychology explain behavioral change across the lifespan?"
+        },
+        {
+            "id": 39,
+            "question": "Why are emotions considered adaptive rather than disruptive?"
+        },
+        {
+            "id": 40,
+            "question": "How do perception and reality diverge in cognitive processing?"
+        },
+        {
+            "id": 41,
+            "question": "Why are algorithms evaluated using both time and space complexity?"
+        },
+        {
+            "id": 42,
+            "question": "How does machine learning differ from traditional rule-based programming?"
+        },
+        {
+            "id": 43,
+            "question": "What makes distributed systems more fault-tolerant than centralized ones?"
+        },
+        {
+            "id": 44,
+            "question": "Why is data normalization important in database design?"
+        },
+        {
+            "id": 45,
+            "question": "How does encryption ensure confidentiality without secrecy of algorithms?"
+        },
+        {
+            "id": 46,
+            "question": "What challenges arise in scaling cloud-native applications?"
+        },
+        {
+            "id": 47,
+            "question": "Why are neural networks considered universal function approximators?"
+        },
+        {
+            "id": 48,
+            "question": "How does virtualization differ from containerization conceptually?"
+        },
+        {
+            "id": 49,
+            "question": "Why is information theory fundamental to digital communication?"
+        },
+        {
+            "id": 50,
+            "question": "How does sparse indexing complement semantic embeddings in search systems?"
+        },
+        {
+            "id": 51,
+            "question": "Why does deep learning require large datasets compared to classical models?"
+        },
+        {
+            "id": 52,
+            "question": "How do embeddings capture semantic similarity beyond keyword overlap?"
+        },
+        {
+            "id": 53,
+            "question": "What trade-offs exist between model interpretability and performance?"
+        },
+        {
+            "id": 54,
+            "question": "Why does overfitting reduce generalization capability?"
+        },
+        {
+            "id": 55,
+            "question": "How does reinforcement learning differ from supervised learning paradigms?"
+        },
+        {
+            "id": 56,
+            "question": "What role does feature engineering play in classical machine learning pipelines?"
+        },
+        {
+            "id": 57,
+            "question": "Why is explainability important in high-stakes AI applications?"
+        },
+        {
+            "id": 58,
+            "question": "How does bias emerge in data-driven systems?"
+        },
+        {
+            "id": 59,
+            "question": "Why do hybrid retrieval systems outperform single-method retrieval?"
+        },
+        {
+            "id": 60,
+            "question": "How does vector similarity search differ from lexical matching?"
+        },
+        {
+            "id": 61,
+            "question": "How did agricultural development reshape early human societies?"
+        },
+        {
+            "id": 62,
+            "question": "Why did centralized empires require bureaucratic governance structures?"
+        },
+        {
+            "id": 63,
+            "question": "How did industrialization alter social class dynamics?"
+        },
+        {
+            "id": 64,
+            "question": "Why did enlightenment thinking challenge absolute monarchy?"
+        },
+        {
+            "id": 65,
+            "question": "How did trade routes influence cultural diffusion?"
+        },
+        {
+            "id": 66,
+            "question": "What factors contributed to the rise and fall of empires?"
+        },
+        {
+            "id": 67,
+            "question": "Why is historical interpretation influenced by contemporary context?"
+        },
+        {
+            "id": 68,
+            "question": "How did colonialism reshape global economic systems?"
+        },
+        {
+            "id": 69,
+            "question": "What role did technological innovation play in the evolution of warfare?"
+        },
+        {
+            "id": 70,
+            "question": "How does globalization differ from earlier forms of international exchange?"
+        },
+        {
+            "id": 71,
+            "question": "Why is the concept of justice interpreted differently across societies?"
+        },
+        {
+            "id": 72,
+            "question": "How does social contract theory justify political authority?"
+        },
+        {
+            "id": 73,
+            "question": "Why is freedom of speech considered foundational to democracy?"
+        },
+        {
+            "id": 74,
+            "question": "How does rule of law differ from rule by law?"
+        },
+        {
+            "id": 75,
+            "question": "Why do ethical frameworks often conflict in moral dilemmas?"
+        },
+        {
+            "id": 76,
+            "question": "How does political philosophy influence governance models?"
+        },
+        {
+            "id": 77,
+            "question": "Why are human rights considered universal despite cultural differences?"
+        },
+        {
+            "id": 78,
+            "question": "How does constitutional law limit governmental power?"
+        },
+        {
+            "id": 79,
+            "question": "Why do economic systems balance efficiency and equity differently?"
+        },
+        {
+            "id": 80,
+            "question": "How does governance extend beyond formal government institutions?"
+        },
+        {
+            "id": 81,
+            "question": "Why does inflation affect purchasing power unevenly across populations?"
+        },
+        {
+            "id": 82,
+            "question": "How does monetary policy influence economic growth indirectly?"
+        },
+        {
+            "id": 83,
+            "question": "Why are market failures common in environmental economics?"
+        },
+        {
+            "id": 84,
+            "question": "How does sustainable development differ from traditional growth models?"
+        },
+        {
+            "id": 85,
+            "question": "Why are externalities difficult to address through markets alone?"
+        },
+        {
+            "id": 86,
+            "question": "How does globalization impact income inequality?"
+        },
+        {
+            "id": 87,
+            "question": "Why do fiscal interventions have delayed economic effects?"
+        },
+        {
+            "id": 88,
+            "question": "How do natural resource constraints shape economic policy?"
+        },
+        {
+            "id": 89,
+            "question": "Why is economic development multidimensional rather than purely financial?"
+        },
+        {
+            "id": 90,
+            "question": "How do institutions influence long-term economic stability?"
+        },
+        {
+            "id": 91,
+            "question": "How does popular culture reflect societal values and tensions?"
+        },
+        {
+            "id": 92,
+            "question": "Why does mass communication shape public opinion at scale?"
+        },
+        {
+            "id": 93,
+            "question": "How has digital media altered information consumption patterns?"
+        },
+        {
+            "id": 94,
+            "question": "Why is journalism considered a pillar of democratic societies?"
+        },
+        {
+            "id": 95,
+            "question": "How does art function as both expression and social commentary?"
+        },
+        {
+            "id": 96,
+            "question": "Why do cultural narratives persist across generations?"
+        },
+        {
+            "id": 97,
+            "question": "How does visual media differ from textual media in persuasion?"
+        },
+        {
+            "id": 98,
+            "question": "Why is cultural anthropology important for understanding societies?"
+        },
+        {
+            "id": 99,
+            "question": "How does urbanization influence cultural identity?"
+        },
+        {
+            "id": 100,
+            "question": "Why does space exploration drive technological innovation beyond science?"
+        }
+    ]
+}
