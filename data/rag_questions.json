@@ -1,406 +1,1938 @@
 {
-    "description": "Evaluation questions designed to require hybrid (sparse + dense) retrieval over a Wikipedia-based corpus.",
-    "total_questions": 100,
-    "questions": [
-        {
-            "id": 1,
-            "question": "How does the concept of spacetime curvature explain gravitational attraction without invoking a force?"
-        },
-        {
-            "id": 2,
-            "question": "What experimental evidence supports the existence of particles beyond classical atomic theory?"
-        },
-        {
-            "id": 3,
-            "question": "Why is entropy considered a directional property in physical systems?"
-        },
-        {
-            "id": 4,
-            "question": "How does quantum uncertainty differ fundamentally from classical measurement error?"
-        },
-        {
-            "id": 5,
-            "question": "In what way does electromagnetic radiation transfer energy through a vacuum?"
-        },
-        {
-            "id": 6,
-            "question": "Why are black holes considered thermodynamic objects?"
-        },
-        {
-            "id": 7,
-            "question": "How does nuclear fusion differ from chemical reactions at an energy level?"
-        },
-        {
-            "id": 8,
-            "question": "What role does symmetry play in modern particle physics theories?"
-        },
-        {
-            "id": 9,
-            "question": "How did observations of planetary motion challenge earlier models of gravity?"
-        },
-        {
-            "id": 10,
-            "question": "Why is the speed of light considered a universal constant?"
-        },
-        {
-            "id": 11,
-            "question": "What evidence supports the theory that the universe is expanding rather than static?"
-        },
-        {
-            "id": 12,
-            "question": "How do stellar life cycles contribute to the formation of heavy elements?"
-        },
-        {
-            "id": 13,
-            "question": "Why do tectonic plate boundaries experience higher seismic activity?"
-        },
-        {
-            "id": 14,
-            "question": "How does Earth’s magnetic field protect the atmosphere from solar wind?"
-        },
-        {
-            "id": 15,
-            "question": "What processes regulate long-term climate stability on Earth?"
-        },
-        {
-            "id": 16,
-            "question": "Why is the Sun classified as a main-sequence star?"
-        },
-        {
-            "id": 17,
-            "question": "How does orbital resonance affect planetary systems?"
-        },
-        {
-            "id": 18,
-            "question": "What distinguishes a planet from other celestial bodies?"
-        },
-        {
-            "id": 19,
-            "question": "Why do oceans play a critical role in regulating global temperatures?"
-        },
-        {
-            "id": 20,
-            "question": "How does atmospheric composition influence surface habitability?"
-        },
-        {
-            "id": 21,
-            "question": "How does genetic variation arise in sexually reproducing populations?"
-        },
-        {
-            "id": 22,
-            "question": "Why is DNA replication considered semi-conservative?"
-        },
-        {
-            "id": 23,
-            "question": "What mechanisms allow cells to convert light energy into chemical energy?"
-        },
-        {
-            "id": 24,
-            "question": "How does the immune system distinguish self from non-self?"
-        },
-        {
-            "id": 25,
-            "question": "Why do vaccines not always provide lifetime immunity?"
-        },
-        {
-            "id": 26,
-            "question": "How do mutations contribute to evolutionary adaptation?"
-        },
-        {
-            "id": 27,
-            "question": "What role does cellular respiration play in energy homeostasis?"
-        },
-        {
-            "id": 28,
-            "question": "How does epidemiology differ from clinical medicine in scope?"
-        },
-        {
-            "id": 29,
-            "question": "Why are certain diseases considered multifactorial?"
-        },
-        {
-            "id": 30,
-            "question": "How does public health focus differ from individual medical treatment?"
-        },
-        {
-            "id": 31,
-            "question": "How does working memory differ from long-term memory in function and capacity?"
-        },
-        {
-            "id": 32,
-            "question": "Why is attention considered a limited cognitive resource?"
-        },
-        {
-            "id": 33,
-            "question": "How does neuroplasticity challenge earlier models of brain rigidity?"
-        },
-        {
-            "id": 34,
-            "question": "What distinguishes conscious awareness from unconscious processing?"
-        },
-        {
-            "id": 35,
-            "question": "Why do cognitive biases persist even with rational education?"
-        },
-        {
-            "id": 36,
-            "question": "How does learning differ from mere information acquisition?"
-        },
-        {
-            "id": 37,
-            "question": "What factors influence decision-making under uncertainty?"
-        },
-        {
-            "id": 38,
-            "question": "How does developmental psychology explain behavioral change across the lifespan?"
-        },
-        {
-            "id": 39,
-            "question": "Why are emotions considered adaptive rather than disruptive?"
-        },
-        {
-            "id": 40,
-            "question": "How do perception and reality diverge in cognitive processing?"
-        },
-        {
-            "id": 41,
-            "question": "Why are algorithms evaluated using both time and space complexity?"
-        },
-        {
-            "id": 42,
-            "question": "How does machine learning differ from traditional rule-based programming?"
-        },
-        {
-            "id": 43,
-            "question": "What makes distributed systems more fault-tolerant than centralized ones?"
-        },
-        {
-            "id": 44,
-            "question": "Why is data normalization important in database design?"
-        },
-        {
-            "id": 45,
-            "question": "How does encryption ensure confidentiality without secrecy of algorithms?"
-        },
-        {
-            "id": 46,
-            "question": "What challenges arise in scaling cloud-native applications?"
-        },
-        {
-            "id": 47,
-            "question": "Why are neural networks considered universal function approximators?"
-        },
-        {
-            "id": 48,
-            "question": "How does virtualization differ from containerization conceptually?"
-        },
-        {
-            "id": 49,
-            "question": "Why is information theory fundamental to digital communication?"
-        },
-        {
-            "id": 50,
-            "question": "How does sparse indexing complement semantic embeddings in search systems?"
-        },
-        {
-            "id": 51,
-            "question": "Why does deep learning require large datasets compared to classical models?"
-        },
-        {
-            "id": 52,
-            "question": "How do embeddings capture semantic similarity beyond keyword overlap?"
-        },
-        {
-            "id": 53,
-            "question": "What trade-offs exist between model interpretability and performance?"
-        },
-        {
-            "id": 54,
-            "question": "Why does overfitting reduce generalization capability?"
-        },
-        {
-            "id": 55,
-            "question": "How does reinforcement learning differ from supervised learning paradigms?"
-        },
-        {
-            "id": 56,
-            "question": "What role does feature engineering play in classical machine learning pipelines?"
-        },
-        {
-            "id": 57,
-            "question": "Why is explainability important in high-stakes AI applications?"
-        },
-        {
-            "id": 58,
-            "question": "How does bias emerge in data-driven systems?"
-        },
-        {
-            "id": 59,
-            "question": "Why do hybrid retrieval systems outperform single-method retrieval?"
-        },
-        {
-            "id": 60,
-            "question": "How does vector similarity search differ from lexical matching?"
-        },
-        {
-            "id": 61,
-            "question": "How did agricultural development reshape early human societies?"
-        },
-        {
-            "id": 62,
-            "question": "Why did centralized empires require bureaucratic governance structures?"
-        },
-        {
-            "id": 63,
-            "question": "How did industrialization alter social class dynamics?"
-        },
-        {
-            "id": 64,
-            "question": "Why did enlightenment thinking challenge absolute monarchy?"
-        },
-        {
-            "id": 65,
-            "question": "How did trade routes influence cultural diffusion?"
-        },
-        {
-            "id": 66,
-            "question": "What factors contributed to the rise and fall of empires?"
-        },
-        {
-            "id": 67,
-            "question": "Why is historical interpretation influenced by contemporary context?"
-        },
-        {
-            "id": 68,
-            "question": "How did colonialism reshape global economic systems?"
-        },
-        {
-            "id": 69,
-            "question": "What role did technological innovation play in the evolution of warfare?"
-        },
-        {
-            "id": 70,
-            "question": "How does globalization differ from earlier forms of international exchange?"
-        },
-        {
-            "id": 71,
-            "question": "Why is the concept of justice interpreted differently across societies?"
-        },
-        {
-            "id": 72,
-            "question": "How does social contract theory justify political authority?"
-        },
-        {
-            "id": 73,
-            "question": "Why is freedom of speech considered foundational to democracy?"
-        },
-        {
-            "id": 74,
-            "question": "How does rule of law differ from rule by law?"
-        },
-        {
-            "id": 75,
-            "question": "Why do ethical frameworks often conflict in moral dilemmas?"
-        },
-        {
-            "id": 76,
-            "question": "How does political philosophy influence governance models?"
-        },
-        {
-            "id": 77,
-            "question": "Why are human rights considered universal despite cultural differences?"
-        },
-        {
-            "id": 78,
-            "question": "How does constitutional law limit governmental power?"
-        },
-        {
-            "id": 79,
-            "question": "Why do economic systems balance efficiency and equity differently?"
-        },
-        {
-            "id": 80,
-            "question": "How does governance extend beyond formal government institutions?"
-        },
-        {
-            "id": 81,
-            "question": "Why does inflation affect purchasing power unevenly across populations?"
-        },
-        {
-            "id": 82,
-            "question": "How does monetary policy influence economic growth indirectly?"
-        },
-        {
-            "id": 83,
-            "question": "Why are market failures common in environmental economics?"
-        },
-        {
-            "id": 84,
-            "question": "How does sustainable development differ from traditional growth models?"
-        },
-        {
-            "id": 85,
-            "question": "Why are externalities difficult to address through markets alone?"
-        },
-        {
-            "id": 86,
-            "question": "How does globalization impact income inequality?"
-        },
-        {
-            "id": 87,
-            "question": "Why do fiscal interventions have delayed economic effects?"
-        },
-        {
-            "id": 88,
-            "question": "How do natural resource constraints shape economic policy?"
-        },
-        {
-            "id": 89,
-            "question": "Why is economic development multidimensional rather than purely financial?"
-        },
-        {
-            "id": 90,
-            "question": "How do institutions influence long-term economic stability?"
-        },
-        {
-            "id": 91,
-            "question": "How does popular culture reflect societal values and tensions?"
-        },
-        {
-            "id": 92,
-            "question": "Why does mass communication shape public opinion at scale?"
-        },
-        {
-            "id": 93,
-            "question": "How has digital media altered information consumption patterns?"
-        },
-        {
-            "id": 94,
-            "question": "Why is journalism considered a pillar of democratic societies?"
-        },
-        {
-            "id": 95,
-            "question": "How does art function as both expression and social commentary?"
-        },
-        {
-            "id": 96,
-            "question": "Why do cultural narratives persist across generations?"
-        },
-        {
-            "id": 97,
-            "question": "How does visual media differ from textual media in persuasion?"
-        },
-        {
-            "id": 98,
-            "question": "Why is cultural anthropology important for understanding societies?"
-        },
-        {
-            "id": 99,
-            "question": "How does urbanization influence cultural identity?"
-        },
-        {
-            "id": 100,
-            "question": "Why does space exploration drive technological innovation beyond science?"
-        }
-    ]
+  "description": "Evaluation questions with ground-truth answers derived from the local Wikipedia-based corpus (scraped_fixed.json).",
+  "total_questions": 100,
+  "sources": [
+    {
+      "id": "S001",
+      "title": "Physics",
+      "url": "https://en.wikipedia.org/wiki/Physics"
+    },
+    {
+      "id": "S002",
+      "title": "Chemistry",
+      "url": "https://en.wikipedia.org/wiki/Chemistry"
+    },
+    {
+      "id": "S003",
+      "title": "Biology",
+      "url": "https://en.wikipedia.org/wiki/Biology"
+    },
+    {
+      "id": "S004",
+      "title": "Mathematics",
+      "url": "https://en.wikipedia.org/wiki/Mathematics"
+    },
+    {
+      "id": "S005",
+      "title": "Computer science",
+      "url": "https://en.wikipedia.org/wiki/Computer_science"
+    },
+    {
+      "id": "S006",
+      "title": "Evolution",
+      "url": "https://en.wikipedia.org/wiki/Evolution"
+    },
+    {
+      "id": "S007",
+      "title": "Plate tectonics",
+      "url": "https://en.wikipedia.org/wiki/Plate_tectonics"
+    },
+    {
+      "id": "S008",
+      "title": "Climate change",
+      "url": "https://en.wikipedia.org/wiki/Climate_change"
+    },
+    {
+      "id": "S009",
+      "title": "Quantum mechanics",
+      "url": "https://en.wikipedia.org/wiki/Quantum_mechanics"
+    },
+    {
+      "id": "S010",
+      "title": "Relativity",
+      "url": "https://en.wikipedia.org/wiki/Relativity"
+    },
+    {
+      "id": "S011",
+      "title": "Astronomy",
+      "url": "https://en.wikipedia.org/wiki/Astronomy"
+    },
+    {
+      "id": "S012",
+      "title": "Universe",
+      "url": "https://en.wikipedia.org/wiki/Universe"
+    },
+    {
+      "id": "S013",
+      "title": "Human brain",
+      "url": "https://en.wikipedia.org/wiki/Human_brain"
+    },
+    {
+      "id": "S014",
+      "title": "DNA",
+      "url": "https://en.wikipedia.org/wiki/DNA"
+    },
+    {
+      "id": "S015",
+      "title": "Photosynthesis",
+      "url": "https://en.wikipedia.org/wiki/Photosynthesis"
+    },
+    {
+      "id": "S016",
+      "title": "Cell (biology)",
+      "url": "https://en.wikipedia.org/wiki/Cell_(biology)"
+    },
+    {
+      "id": "S017",
+      "title": "History of the Internet",
+      "url": "https://en.wikipedia.org/wiki/History_of_the_Internet"
+    },
+    {
+      "id": "S018",
+      "title": "World War II",
+      "url": "https://en.wikipedia.org/wiki/World_War_II"
+    },
+    {
+      "id": "S019",
+      "title": "Ancient Egypt",
+      "url": "https://en.wikipedia.org/wiki/Ancient_Egypt"
+    },
+    {
+      "id": "S020",
+      "title": "Renaissance",
+      "url": "https://en.wikipedia.org/wiki/Renaissance"
+    },
+    {
+      "id": "S021",
+      "title": "Industrial Revolution",
+      "url": "https://en.wikipedia.org/wiki/Industrial_Revolution"
+    },
+    {
+      "id": "S022",
+      "title": "French Revolution",
+      "url": "https://en.wikipedia.org/wiki/French_Revolution"
+    },
+    {
+      "id": "S023",
+      "title": "Cold War",
+      "url": "https://en.wikipedia.org/wiki/Cold_War"
+    },
+    {
+      "id": "S024",
+      "title": "Great Depression",
+      "url": "https://en.wikipedia.org/wiki/Great_Depression"
+    },
+    {
+      "id": "S025",
+      "title": "Philosophy",
+      "url": "https://en.wikipedia.org/wiki/Philosophy"
+    },
+    {
+      "id": "S026",
+      "title": "Ethics",
+      "url": "https://en.wikipedia.org/wiki/Ethics"
+    },
+    {
+      "id": "S027",
+      "title": "Logic",
+      "url": "https://en.wikipedia.org/wiki/Logic"
+    },
+    {
+      "id": "S028",
+      "title": "Aesthetics",
+      "url": "https://en.wikipedia.org/wiki/Aesthetics"
+    },
+    {
+      "id": "S029",
+      "title": "Political science",
+      "url": "https://en.wikipedia.org/wiki/Political_science"
+    },
+    {
+      "id": "S030",
+      "title": "Economics",
+      "url": "https://en.wikipedia.org/wiki/Economics"
+    },
+    {
+      "id": "S031",
+      "title": "Macroeconomics",
+      "url": "https://en.wikipedia.org/wiki/Macroeconomics"
+    },
+    {
+      "id": "S032",
+      "title": "Microeconomics",
+      "url": "https://en.wikipedia.org/wiki/Microeconomics"
+    },
+    {
+      "id": "S033",
+      "title": "Statistics",
+      "url": "https://en.wikipedia.org/wiki/Statistics"
+    },
+    {
+      "id": "S034",
+      "title": "Probability",
+      "url": "https://en.wikipedia.org/wiki/Probability"
+    },
+    {
+      "id": "S035",
+      "title": "Artificial intelligence",
+      "url": "https://en.wikipedia.org/wiki/Artificial_intelligence"
+    },
+    {
+      "id": "S036",
+      "title": "Machine learning",
+      "url": "https://en.wikipedia.org/wiki/Machine_learning"
+    },
+    {
+      "id": "S037",
+      "title": "Neural network",
+      "url": "https://en.wikipedia.org/wiki/Neural_network"
+    },
+    {
+      "id": "S038",
+      "title": "Data science",
+      "url": "https://en.wikipedia.org/wiki/Data_science"
+    },
+    {
+      "id": "S039",
+      "title": "Internet of things",
+      "url": "https://en.wikipedia.org/wiki/Internet_of_things"
+    },
+    {
+      "id": "S040",
+      "title": "Cryptocurrency",
+      "url": "https://en.wikipedia.org/wiki/Cryptocurrency"
+    },
+    {
+      "id": "S041",
+      "title": "Blockchain",
+      "url": "https://en.wikipedia.org/wiki/Blockchain"
+    },
+    {
+      "id": "S042",
+      "title": "World Wide Web",
+      "url": "https://en.wikipedia.org/wiki/World_Wide_Web"
+    },
+    {
+      "id": "S043",
+      "title": "Open source",
+      "url": "https://en.wikipedia.org/wiki/Open_source"
+    },
+    {
+      "id": "S044",
+      "title": "Software engineering",
+      "url": "https://en.wikipedia.org/wiki/Software_engineering"
+    },
+    {
+      "id": "S045",
+      "title": "Operating system",
+      "url": "https://en.wikipedia.org/wiki/Operating_system"
+    },
+    {
+      "id": "S046",
+      "title": "Database",
+      "url": "https://en.wikipedia.org/wiki/Database"
+    },
+    {
+      "id": "S047",
+      "title": "Computer network",
+      "url": "https://en.wikipedia.org/wiki/Computer_network"
+    },
+    {
+      "id": "S048",
+      "title": "Encryption",
+      "url": "https://en.wikipedia.org/wiki/Encryption"
+    },
+    {
+      "id": "S049",
+      "title": "Cybersecurity",
+      "url": "https://en.wikipedia.org/wiki/Cybersecurity"
+    },
+    {
+      "id": "S050",
+      "title": "Electricity",
+      "url": "https://en.wikipedia.org/wiki/Electricity"
+    },
+    {
+      "id": "S051",
+      "title": "Magnetism",
+      "url": "https://en.wikipedia.org/wiki/Magnetism"
+    },
+    {
+      "id": "S052",
+      "title": "Light",
+      "url": "https://en.wikipedia.org/wiki/Light"
+    },
+    {
+      "id": "S053",
+      "title": "Sound",
+      "url": "https://en.wikipedia.org/wiki/Sound"
+    },
+    {
+      "id": "S054",
+      "title": "Energy",
+      "url": "https://en.wikipedia.org/wiki/Energy"
+    },
+    {
+      "id": "S055",
+      "title": "Gravity",
+      "url": "https://en.wikipedia.org/wiki/Gravity"
+    },
+    {
+      "id": "S056",
+      "title": "Black hole",
+      "url": "https://en.wikipedia.org/wiki/Black_hole"
+    },
+    {
+      "id": "S057",
+      "title": "Solar system",
+      "url": "https://en.wikipedia.org/wiki/Solar_system"
+    },
+    {
+      "id": "S058",
+      "title": "Earth",
+      "url": "https://en.wikipedia.org/wiki/Earth"
+    },
+    {
+      "id": "S059",
+      "title": "Atmosphere",
+      "url": "https://en.wikipedia.org/wiki/Atmosphere"
+    },
+    {
+      "id": "S060",
+      "title": "Ocean",
+      "url": "https://en.wikipedia.org/wiki/Ocean"
+    },
+    {
+      "id": "S061",
+      "title": "Biodiversity",
+      "url": "https://en.wikipedia.org/wiki/Biodiversity"
+    },
+    {
+      "id": "S062",
+      "title": "Conservation",
+      "url": "https://en.wikipedia.org/wiki/Conservation"
+    },
+    {
+      "id": "S063",
+      "title": "Ecology",
+      "url": "https://en.wikipedia.org/wiki/Ecology"
+    },
+    {
+      "id": "S064",
+      "title": "Genetics",
+      "url": "https://en.wikipedia.org/wiki/Genetics"
+    },
+    {
+      "id": "S065",
+      "title": "Immunology",
+      "url": "https://en.wikipedia.org/wiki/Immunology"
+    },
+    {
+      "id": "S066",
+      "title": "Epidemiology",
+      "url": "https://en.wikipedia.org/wiki/Epidemiology"
+    },
+    {
+      "id": "S067",
+      "title": "Vaccination",
+      "url": "https://en.wikipedia.org/wiki/Vaccination"
+    },
+    {
+      "id": "S068",
+      "title": "Medicine",
+      "url": "https://en.wikipedia.org/wiki/Medicine"
+    },
+    {
+      "id": "S069",
+      "title": "Nutrition",
+      "url": "https://en.wikipedia.org/wiki/Nutrition"
+    },
+    {
+      "id": "S070",
+      "title": "Exercise",
+      "url": "https://en.wikipedia.org/wiki/Exercise"
+    },
+    {
+      "id": "S071",
+      "title": "Public health",
+      "url": "https://en.wikipedia.org/wiki/Public_health"
+    },
+    {
+      "id": "S072",
+      "title": "Geology",
+      "url": "https://en.wikipedia.org/wiki/Geology"
+    },
+    {
+      "id": "S073",
+      "title": "Volcano",
+      "url": "https://en.wikipedia.org/wiki/Volcano"
+    },
+    {
+      "id": "S074",
+      "title": "Earthquake",
+      "url": "https://en.wikipedia.org/wiki/Earthquake"
+    },
+    {
+      "id": "S075",
+      "title": "Mineral",
+      "url": "https://en.wikipedia.org/wiki/Mineral"
+    },
+    {
+      "id": "S076",
+      "title": "Fossil",
+      "url": "https://en.wikipedia.org/wiki/Fossil"
+    },
+    {
+      "id": "S077",
+      "title": "Archaeology",
+      "url": "https://en.wikipedia.org/wiki/Archaeology"
+    },
+    {
+      "id": "S078",
+      "title": "Anthropology",
+      "url": "https://en.wikipedia.org/wiki/Anthropology"
+    },
+    {
+      "id": "S079",
+      "title": "Sociology",
+      "url": "https://en.wikipedia.org/wiki/Sociology"
+    },
+    {
+      "id": "S080",
+      "title": "Psychology",
+      "url": "https://en.wikipedia.org/wiki/Psychology"
+    },
+    {
+      "id": "S081",
+      "title": "Education",
+      "url": "https://en.wikipedia.org/wiki/Education"
+    },
+    {
+      "id": "S082",
+      "title": "Linguistics",
+      "url": "https://en.wikipedia.org/wiki/Linguistics"
+    },
+    {
+      "id": "S083",
+      "title": "Literature",
+      "url": "https://en.wikipedia.org/wiki/Literature"
+    },
+    {
+      "id": "S084",
+      "title": "Poetry",
+      "url": "https://en.wikipedia.org/wiki/Poetry"
+    },
+    {
+      "id": "S085",
+      "title": "Drama",
+      "url": "https://en.wikipedia.org/wiki/Drama"
+    },
+    {
+      "id": "S086",
+      "title": "Religion",
+      "url": "https://en.wikipedia.org/wiki/Religion"
+    },
+    {
+      "id": "S087",
+      "title": "Mythology",
+      "url": "https://en.wikipedia.org/wiki/Mythology"
+    },
+    {
+      "id": "S088",
+      "title": "Art",
+      "url": "https://en.wikipedia.org/wiki/Art"
+    },
+    {
+      "id": "S089",
+      "title": "Music",
+      "url": "https://en.wikipedia.org/wiki/Music"
+    },
+    {
+      "id": "S090",
+      "title": "Painting",
+      "url": "https://en.wikipedia.org/wiki/Painting"
+    },
+    {
+      "id": "S091",
+      "title": "Sculpture",
+      "url": "https://en.wikipedia.org/wiki/Sculpture"
+    },
+    {
+      "id": "S092",
+      "title": "Architecture",
+      "url": "https://en.wikipedia.org/wiki/Architecture"
+    },
+    {
+      "id": "S093",
+      "title": "Photography",
+      "url": "https://en.wikipedia.org/wiki/Photography"
+    },
+    {
+      "id": "S094",
+      "title": "Film",
+      "url": "https://en.wikipedia.org/wiki/Film"
+    },
+    {
+      "id": "S095",
+      "title": "Theatre",
+      "url": "https://en.wikipedia.org/wiki/Theatre"
+    },
+    {
+      "id": "S096",
+      "title": "Dance",
+      "url": "https://en.wikipedia.org/wiki/Dance"
+    },
+    {
+      "id": "S097",
+      "title": "Fashion",
+      "url": "https://en.wikipedia.org/wiki/Fashion"
+    },
+    {
+      "id": "S098",
+      "title": "Cuisine",
+      "url": "https://en.wikipedia.org/wiki/Cuisine"
+    },
+    {
+      "id": "S099",
+      "title": "Geography",
+      "url": "https://en.wikipedia.org/wiki/Geography"
+    },
+    {
+      "id": "S100",
+      "title": "Capital city",
+      "url": "https://en.wikipedia.org/wiki/Capital_city"
+    },
+    {
+      "id": "S101",
+      "title": "United States",
+      "url": "https://en.wikipedia.org/wiki/United_States"
+    },
+    {
+      "id": "S102",
+      "title": "India",
+      "url": "https://en.wikipedia.org/wiki/India"
+    },
+    {
+      "id": "S103",
+      "title": "China",
+      "url": "https://en.wikipedia.org/wiki/China"
+    },
+    {
+      "id": "S104",
+      "title": "Brazil",
+      "url": "https://en.wikipedia.org/wiki/Brazil"
+    },
+    {
+      "id": "S105",
+      "title": "Australia",
+      "url": "https://en.wikipedia.org/wiki/Australia"
+    },
+    {
+      "id": "S106",
+      "title": "Russia",
+      "url": "https://en.wikipedia.org/wiki/Russia"
+    },
+    {
+      "id": "S107",
+      "title": "Canada",
+      "url": "https://en.wikipedia.org/wiki/Canada"
+    },
+    {
+      "id": "S108",
+      "title": "Mexico",
+      "url": "https://en.wikipedia.org/wiki/Mexico"
+    },
+    {
+      "id": "S109",
+      "title": "European Union",
+      "url": "https://en.wikipedia.org/wiki/European_Union"
+    },
+    {
+      "id": "S110",
+      "title": "United Nations",
+      "url": "https://en.wikipedia.org/wiki/United_Nations"
+    },
+    {
+      "id": "S111",
+      "title": "Democracy",
+      "url": "https://en.wikipedia.org/wiki/Democracy"
+    },
+    {
+      "id": "S112",
+      "title": "Constitution",
+      "url": "https://en.wikipedia.org/wiki/Constitution"
+    },
+    {
+      "id": "S113",
+      "title": "Law",
+      "url": "https://en.wikipedia.org/wiki/Law"
+    },
+    {
+      "id": "S114",
+      "title": "Justice",
+      "url": "https://en.wikipedia.org/wiki/Justice"
+    },
+    {
+      "id": "S115",
+      "title": "International law",
+      "url": "https://en.wikipedia.org/wiki/International_law"
+    },
+    {
+      "id": "S116",
+      "title": "Globalization",
+      "url": "https://en.wikipedia.org/wiki/Globalization"
+    },
+    {
+      "id": "S117",
+      "title": "Big Bang",
+      "url": "https://en.wikipedia.org/wiki/Big_Bang"
+    },
+    {
+      "id": "S118",
+      "title": "Dark matter",
+      "url": "https://en.wikipedia.org/wiki/Dark_matter"
+    },
+    {
+      "id": "S119",
+      "title": "Dark energy",
+      "url": "https://en.wikipedia.org/wiki/Dark_energy"
+    },
+    {
+      "id": "S120",
+      "title": "Neuroscience",
+      "url": "https://en.wikipedia.org/wiki/Neuroscience"
+    },
+    {
+      "id": "S121",
+      "title": "Biotechnology",
+      "url": "https://en.wikipedia.org/wiki/Biotechnology"
+    },
+    {
+      "id": "S122",
+      "title": "Genetic engineering",
+      "url": "https://en.wikipedia.org/wiki/Genetic_engineering"
+    },
+    {
+      "id": "S123",
+      "title": "Deep learning",
+      "url": "https://en.wikipedia.org/wiki/Deep_learning"
+    },
+    {
+      "id": "S124",
+      "title": "Natural language processing",
+      "url": "https://en.wikipedia.org/wiki/Natural_language_processing"
+    },
+    {
+      "id": "S125",
+      "title": "Cloud computing",
+      "url": "https://en.wikipedia.org/wiki/Cloud_computing"
+    },
+    {
+      "id": "S126",
+      "title": "Distributed computing",
+      "url": "https://en.wikipedia.org/wiki/Distributed_computing"
+    },
+    {
+      "id": "S127",
+      "title": "Roman Empire",
+      "url": "https://en.wikipedia.org/wiki/Roman_Empire"
+    },
+    {
+      "id": "S128",
+      "title": "Indus Valley Civilisation",
+      "url": "https://en.wikipedia.org/wiki/Indus_Valley_Civilisation"
+    },
+    {
+      "id": "S129",
+      "title": "Mesopotamia",
+      "url": "https://en.wikipedia.org/wiki/Mesopotamia"
+    },
+    {
+      "id": "S130",
+      "title": "Age of Enlightenment",
+      "url": "https://en.wikipedia.org/wiki/Age_of_Enlightenment"
+    },
+    {
+      "id": "S131",
+      "title": "Existentialism",
+      "url": "https://en.wikipedia.org/wiki/Existentialism"
+    },
+    {
+      "id": "S132",
+      "title": "Human rights",
+      "url": "https://en.wikipedia.org/wiki/Human_rights"
+    },
+    {
+      "id": "S133",
+      "title": "Capitalism",
+      "url": "https://en.wikipedia.org/wiki/Capitalism"
+    },
+    {
+      "id": "S134",
+      "title": "Socialism",
+      "url": "https://en.wikipedia.org/wiki/Socialism"
+    },
+    {
+      "id": "S135",
+      "title": "Inflation",
+      "url": "https://en.wikipedia.org/wiki/Inflation"
+    },
+    {
+      "id": "S136",
+      "title": "Monetary policy",
+      "url": "https://en.wikipedia.org/wiki/Monetary_policy"
+    },
+    {
+      "id": "S137",
+      "title": "Fiscal policy",
+      "url": "https://en.wikipedia.org/wiki/Fiscal_policy"
+    },
+    {
+      "id": "S138",
+      "title": "Scientific method",
+      "url": "https://en.wikipedia.org/wiki/Scientific_method"
+    },
+    {
+      "id": "S139",
+      "title": "Control theory",
+      "url": "https://en.wikipedia.org/wiki/Control_theory"
+    },
+    {
+      "id": "S140",
+      "title": "Systems engineering",
+      "url": "https://en.wikipedia.org/wiki/Systems_engineering"
+    },
+    {
+      "id": "S141",
+      "title": "Materials science",
+      "url": "https://en.wikipedia.org/wiki/Materials_science"
+    },
+    {
+      "id": "S142",
+      "title": "Nanotechnology",
+      "url": "https://en.wikipedia.org/wiki/Nanotechnology"
+    },
+    {
+      "id": "S143",
+      "title": "Robotics",
+      "url": "https://en.wikipedia.org/wiki/Robotics"
+    },
+    {
+      "id": "S144",
+      "title": "Mechatronics",
+      "url": "https://en.wikipedia.org/wiki/Mechatronics"
+    },
+    {
+      "id": "S145",
+      "title": "Aerospace engineering",
+      "url": "https://en.wikipedia.org/wiki/Aerospace_engineering"
+    },
+    {
+      "id": "S146",
+      "title": "Civil engineering",
+      "url": "https://en.wikipedia.org/wiki/Civil_engineering"
+    },
+    {
+      "id": "S147",
+      "title": "Mechanical engineering",
+      "url": "https://en.wikipedia.org/wiki/Mechanical_engineering"
+    },
+    {
+      "id": "S148",
+      "title": "Information theory",
+      "url": "https://en.wikipedia.org/wiki/Information_theory"
+    },
+    {
+      "id": "S149",
+      "title": "Algorithm",
+      "url": "https://en.wikipedia.org/wiki/Algorithm"
+    },
+    {
+      "id": "S150",
+      "title": "Computational complexity theory",
+      "url": "https://en.wikipedia.org/wiki/Computational_complexity_theory"
+    },
+    {
+      "id": "S151",
+      "title": "Programming language",
+      "url": "https://en.wikipedia.org/wiki/Programming_language"
+    },
+    {
+      "id": "S152",
+      "title": "Compiler",
+      "url": "https://en.wikipedia.org/wiki/Compiler"
+    },
+    {
+      "id": "S153",
+      "title": "Operating system kernel",
+      "url": "https://en.wikipedia.org/wiki/Operating_system_kernel"
+    },
+    {
+      "id": "S154",
+      "title": "Virtualization",
+      "url": "https://en.wikipedia.org/wiki/Virtualization"
+    },
+    {
+      "id": "S155",
+      "title": "Containerization (computing)",
+      "url": "https://en.wikipedia.org/wiki/Containerization_(computing)"
+    },
+    {
+      "id": "S156",
+      "title": "Big data",
+      "url": "https://en.wikipedia.org/wiki/Big_data"
+    },
+    {
+      "id": "S157",
+      "title": "Information security",
+      "url": "https://en.wikipedia.org/wiki/Information_security"
+    },
+    {
+      "id": "S158",
+      "title": "Cognitive science",
+      "url": "https://en.wikipedia.org/wiki/Cognitive_science"
+    },
+    {
+      "id": "S159",
+      "title": "Consciousness",
+      "url": "https://en.wikipedia.org/wiki/Consciousness"
+    },
+    {
+      "id": "S160",
+      "title": "Memory",
+      "url": "https://en.wikipedia.org/wiki/Memory"
+    },
+    {
+      "id": "S161",
+      "title": "Attention",
+      "url": "https://en.wikipedia.org/wiki/Attention"
+    },
+    {
+      "id": "S162",
+      "title": "Learning",
+      "url": "https://en.wikipedia.org/wiki/Learning"
+    },
+    {
+      "id": "S163",
+      "title": "Decision theory",
+      "url": "https://en.wikipedia.org/wiki/Decision_theory"
+    },
+    {
+      "id": "S164",
+      "title": "Neuroplasticity",
+      "url": "https://en.wikipedia.org/wiki/Neuroplasticity"
+    },
+    {
+      "id": "S165",
+      "title": "Developmental psychology",
+      "url": "https://en.wikipedia.org/wiki/Developmental_psychology"
+    },
+    {
+      "id": "S166",
+      "title": "History of humanity",
+      "url": "https://en.wikipedia.org/wiki/History_of_humanity"
+    },
+    {
+      "id": "S167",
+      "title": "Prehistory",
+      "url": "https://en.wikipedia.org/wiki/Prehistory"
+    },
+    {
+      "id": "S168",
+      "title": "Ancient Greece",
+      "url": "https://en.wikipedia.org/wiki/Ancient_Greece"
+    },
+    {
+      "id": "S169",
+      "title": "Byzantine Empire",
+      "url": "https://en.wikipedia.org/wiki/Byzantine_Empire"
+    },
+    {
+      "id": "S170",
+      "title": "Ottoman Empire",
+      "url": "https://en.wikipedia.org/wiki/Ottoman_Empire"
+    },
+    {
+      "id": "S171",
+      "title": "Mughal Empire",
+      "url": "https://en.wikipedia.org/wiki/Mughal_Empire"
+    },
+    {
+      "id": "S172",
+      "title": "History of India",
+      "url": "https://en.wikipedia.org/wiki/History_of_India"
+    },
+    {
+      "id": "S173",
+      "title": "History of China",
+      "url": "https://en.wikipedia.org/wiki/History_of_China"
+    },
+    {
+      "id": "S174",
+      "title": "Earth system science",
+      "url": "https://en.wikipedia.org/wiki/Earth_system_science"
+    },
+    {
+      "id": "S175",
+      "title": "Carbon cycle",
+      "url": "https://en.wikipedia.org/wiki/Carbon_cycle"
+    },
+    {
+      "id": "S176",
+      "title": "Water cycle",
+      "url": "https://en.wikipedia.org/wiki/Water_cycle"
+    },
+    {
+      "id": "S177",
+      "title": "Atmospheric science",
+      "url": "https://en.wikipedia.org/wiki/Atmospheric_science"
+    },
+    {
+      "id": "S178",
+      "title": "Climate model",
+      "url": "https://en.wikipedia.org/wiki/Climate_model"
+    },
+    {
+      "id": "S179",
+      "title": "Environmental science",
+      "url": "https://en.wikipedia.org/wiki/Environmental_science"
+    },
+    {
+      "id": "S180",
+      "title": "Environmental policy",
+      "url": "https://en.wikipedia.org/wiki/Environmental_policy"
+    },
+    {
+      "id": "S181",
+      "title": "Political philosophy",
+      "url": "https://en.wikipedia.org/wiki/Political_philosophy"
+    },
+    {
+      "id": "S182",
+      "title": "Public policy",
+      "url": "https://en.wikipedia.org/wiki/Public_policy"
+    },
+    {
+      "id": "S183",
+      "title": "Governance",
+      "url": "https://en.wikipedia.org/wiki/Governance"
+    },
+    {
+      "id": "S184",
+      "title": "International relations",
+      "url": "https://en.wikipedia.org/wiki/International_relations"
+    },
+    {
+      "id": "S185",
+      "title": "Geopolitics",
+      "url": "https://en.wikipedia.org/wiki/Geopolitics"
+    },
+    {
+      "id": "S186",
+      "title": "Economic development",
+      "url": "https://en.wikipedia.org/wiki/Economic_development"
+    },
+    {
+      "id": "S187",
+      "title": "Sustainable economy",
+      "url": "https://en.wikipedia.org/wiki/Sustainable_economy"
+    },
+    {
+      "id": "S188",
+      "title": "Mass communication",
+      "url": "https://en.wikipedia.org/wiki/Mass_communication"
+    },
+    {
+      "id": "S189",
+      "title": "Journalism",
+      "url": "https://en.wikipedia.org/wiki/Journalism"
+    },
+    {
+      "id": "S190",
+      "title": "Digital media",
+      "url": "https://en.wikipedia.org/wiki/Digital_media"
+    },
+    {
+      "id": "S191",
+      "title": "Popular culture",
+      "url": "https://en.wikipedia.org/wiki/Popular_culture"
+    },
+    {
+      "id": "S192",
+      "title": "Cultural anthropology",
+      "url": "https://en.wikipedia.org/wiki/Cultural_anthropology"
+    },
+    {
+      "id": "S193",
+      "title": "Visual arts",
+      "url": "https://en.wikipedia.org/wiki/Visual_arts"
+    },
+    {
+      "id": "S194",
+      "title": "Game theory",
+      "url": "https://en.wikipedia.org/wiki/Game_theory"
+    },
+    {
+      "id": "S195",
+      "title": "Complex system",
+      "url": "https://en.wikipedia.org/wiki/Complex_system"
+    },
+    {
+      "id": "S196",
+      "title": "Network science",
+      "url": "https://en.wikipedia.org/wiki/Network_science"
+    },
+    {
+      "id": "S197",
+      "title": "Evolutionary biology",
+      "url": "https://en.wikipedia.org/wiki/Evolutionary_biology"
+    },
+    {
+      "id": "S198",
+      "title": "Urbanization",
+      "url": "https://en.wikipedia.org/wiki/Urbanization"
+    },
+    {
+      "id": "S199",
+      "title": "Space exploration",
+      "url": "https://en.wikipedia.org/wiki/Space_exploration"
+    }
+  ],
+  "questions": [
+    {
+      "question": "What is Vaccination?",
+      "ground_truth": "Vaccination is the administration of a vaccine to help the immune system develop immunity from a disease.",
+      "source_ids": [
+        "S067"
+      ],
+      "category": "factual",
+      "id": 1
+    },
+    {
+      "question": "What is United Nations?",
+      "ground_truth": "The United Nations (UN) is a global intergovernmental organization established by the signing of the UN Charter on 26 June 1945 with the articulated mission of maintaining international peace and security, to develop friendly relations among states, to promote international cooperation, and to serve as a centre for harmonizing the actions of states in achieving those goals.",
+      "source_ids": [
+        "S110"
+      ],
+      "category": "factual",
+      "id": 2
+    },
+    {
+      "question": "What is Macroeconomics?",
+      "ground_truth": "Heterodox Macroeconomics is a branch of economics that deals with the performance, structure, behavior, and decision-making of an economy as a whole.",
+      "source_ids": [
+        "S031"
+      ],
+      "category": "factual",
+      "id": 3
+    },
+    {
+      "question": "What is Constitution?",
+      "ground_truth": "A constitution, or supreme law, is the aggregate of fundamental principles or established precedents that constitute the legal basis of a polity, organization or other type of entity, and commonly determines how that entity is to be governed.",
+      "source_ids": [
+        "S112"
+      ],
+      "category": "factual",
+      "id": 4
+    },
+    {
+      "question": "What is DNA?",
+      "ground_truth": "Deoxyribonucleic acid (pronunciation\u24d8; DNA) is a polymer composed of two polynucleotide chains that coil around each other to form a double helix.",
+      "source_ids": [
+        "S014"
+      ],
+      "category": "factual",
+      "id": 5
+    },
+    {
+      "question": "What is Open source?",
+      "ground_truth": "Open source is source code that is made freely available for possible modification and redistribution.",
+      "source_ids": [
+        "S043"
+      ],
+      "category": "factual",
+      "id": 6
+    },
+    {
+      "question": "What is Dance?",
+      "ground_truth": "Dance is an art form, consisting of sequences of body movements with aesthetic and often symbolic value, either improvised or purposefully selected.",
+      "source_ids": [
+        "S096"
+      ],
+      "category": "factual",
+      "id": 7
+    },
+    {
+      "question": "What is Biology?",
+      "ground_truth": "Biology is the scientific study of life and living organisms.",
+      "source_ids": [
+        "S003"
+      ],
+      "category": "factual",
+      "id": 8
+    },
+    {
+      "question": "What is Database?",
+      "ground_truth": "In computing, a database is an organized collection of data or a type of data store based on the use of a database management system (DBMS), the software that interacts with end users, applications, and the database itself to capture and analyze the data.",
+      "source_ids": [
+        "S046"
+      ],
+      "category": "factual",
+      "id": 9
+    },
+    {
+      "question": "What is Immunology?",
+      "ground_truth": "Immunology is a branch of biology and medicine that covers the study of immune systems in all organisms.",
+      "source_ids": [
+        "S065"
+      ],
+      "category": "factual",
+      "id": 10
+    },
+    {
+      "question": "What is Consciousness?",
+      "ground_truth": "Consciousness is being aware of something internal to one's self or being conscious of states or objects in one's external environment.",
+      "source_ids": [
+        "S159"
+      ],
+      "category": "factual",
+      "id": 11
+    },
+    {
+      "question": "What is Popular culture?",
+      "ground_truth": "Popular culture (also called pop culture or mass culture) is generally recognized by members of a society as a set of practices, beliefs, artistic output (also known as popular art [cf.",
+      "source_ids": [
+        "S191"
+      ],
+      "category": "factual",
+      "id": 12
+    },
+    {
+      "question": "What is Monetary policy?",
+      "ground_truth": "Heterodox Monetary policy is the policy adopted by the monetary authority of a nation to affect monetary and other financial conditions to accomplish broader objectives like high employment and price stability (normally interpreted as a low and stable rate of inflation).",
+      "source_ids": [
+        "S136"
+      ],
+      "category": "factual",
+      "id": 13
+    },
+    {
+      "question": "What is Robotics?",
+      "ground_truth": "Robotics is the interdisciplinary study and practice of the design, construction, operation, and use of robots.",
+      "source_ids": [
+        "S143"
+      ],
+      "category": "factual",
+      "id": 14
+    },
+    {
+      "question": "What is Sustainable economy?",
+      "ground_truth": "Sustainability (from the latin sustinere - hold up, hold upright; furnish with means of support; bear, undergo, endure) is the ability to continue over a long period of time.",
+      "source_ids": [
+        "S187"
+      ],
+      "category": "factual",
+      "id": 15
+    },
+    {
+      "question": "What is Operating system?",
+      "ground_truth": "An operating system (OS) is system software that manages computer hardware and software resources, and provides common services for computer programs.",
+      "source_ids": [
+        "S045"
+      ],
+      "category": "factual",
+      "id": 16
+    },
+    {
+      "question": "What is Biotechnology?",
+      "ground_truth": "Biotechnology is a multidisciplinary field that involves the integration of natural sciences and engineering sciences in order to achieve the application of organisms and parts thereof for products and services.",
+      "source_ids": [
+        "S121"
+      ],
+      "category": "factual",
+      "id": 17
+    },
+    {
+      "question": "What is Water cycle?",
+      "ground_truth": "The water cycle (or hydrologic cycle or hydrological cycle) is a biogeochemical cycle that involves the continuous change in form of water on, above and below the surface of the Earth across different reservoirs.",
+      "source_ids": [
+        "S176"
+      ],
+      "category": "factual",
+      "id": 18
+    },
+    {
+      "question": "What is Mathematics?",
+      "ground_truth": "Mathematics is a field of study that discovers and organizes methods, theories, and theorems that are developed and proved for the needs of empirical sciences and mathematics itself.",
+      "source_ids": [
+        "S004"
+      ],
+      "category": "factual",
+      "id": 19
+    },
+    {
+      "question": "What is Cognitive science?",
+      "ground_truth": "Cognitive science is the interdisciplinary, scientific study of the mind and its processes.",
+      "source_ids": [
+        "S158"
+      ],
+      "category": "factual",
+      "id": 20
+    },
+    {
+      "question": "What is Cell (biology)?",
+      "ground_truth": "The cell is the basic structural and functional unit of all forms of life or organisms.",
+      "source_ids": [
+        "S016"
+      ],
+      "category": "factual",
+      "id": 21
+    },
+    {
+      "question": "What is Aerospace engineering?",
+      "ground_truth": "Aerospace engineering is the primary field of engineering concerned with the development of aircraft and spacecraft.",
+      "source_ids": [
+        "S145"
+      ],
+      "category": "factual",
+      "id": 22
+    },
+    {
+      "question": "What is Mughal Empire?",
+      "ground_truth": "The Mughal Empire was an early modern empire that ruled most of the Indian subcontinent.",
+      "source_ids": [
+        "S171"
+      ],
+      "category": "factual",
+      "id": 23
+    },
+    {
+      "question": "What is Learning?",
+      "ground_truth": "Learning is the process of acquiring new understanding, knowledge, behaviors, skills, values, attitudes, and preferences.",
+      "source_ids": [
+        "S162"
+      ],
+      "category": "factual",
+      "id": 24
+    },
+    {
+      "question": "What is Roman Empire?",
+      "ground_truth": "During the classical period, the Roman Empire controlled the Mediterranean and much of Europe, Western Asia, and North Africa.",
+      "source_ids": [
+        "S127"
+      ],
+      "category": "factual",
+      "id": 25
+    },
+    {
+      "question": "What is Globalization?",
+      "ground_truth": "Globalization is the process of increasing interdependence and integration among the economies, markets, societies, and cultures of different countries worldwide.",
+      "source_ids": [
+        "S116"
+      ],
+      "category": "factual",
+      "id": 26
+    },
+    {
+      "question": "What is Encryption?",
+      "ground_truth": "In cryptography, encryption (more specifically, encoding) is the process of transforming information in a way that, ideally, only authorized parties can decode.",
+      "source_ids": [
+        "S048"
+      ],
+      "category": "factual",
+      "id": 27
+    },
+    {
+      "question": "What is Evolution?",
+      "ground_truth": "Evolution is the change in the heritable characteristics of biological populations over successive generations.",
+      "source_ids": [
+        "S006"
+      ],
+      "category": "factual",
+      "id": 28
+    },
+    {
+      "question": "What is Law?",
+      "ground_truth": "Law is a set of rules that are created and are enforceable by governmental or societal institutions to regulate behavior, with its precise definition a matter of longstanding debate.",
+      "source_ids": [
+        "S113"
+      ],
+      "category": "factual",
+      "id": 29
+    },
+    {
+      "question": "What is Neural network?",
+      "ground_truth": "A neural network is a group of interconnected units called neurons that send signals to one another.",
+      "source_ids": [
+        "S037"
+      ],
+      "category": "factual",
+      "id": 30
+    },
+    {
+      "question": "What is Conservation?",
+      "ground_truth": "Conservation is the preservation or efficient use of resources, or the conservation of various quantities under physical laws.",
+      "source_ids": [
+        "S062"
+      ],
+      "category": "factual",
+      "id": 31
+    },
+    {
+      "question": "What is Human brain?",
+      "ground_truth": "The human brain is the central organ of the nervous system, and with the spinal cord, comprises the central nervous system.",
+      "source_ids": [
+        "S013"
+      ],
+      "category": "factual",
+      "id": 32
+    },
+    {
+      "question": "What is Exercise?",
+      "ground_truth": "Exercise or working out is physical activity that enhances or maintains fitness and overall health.",
+      "source_ids": [
+        "S070"
+      ],
+      "category": "factual",
+      "id": 33
+    },
+    {
+      "question": "What is Complex system?",
+      "ground_truth": "Collective intelligence Collective action Self-organized criticality Herd mentality Phase transition Agent-based modelling Synchronization Ant colony optimization Particle swarm optimization Swarm behaviour Social network analysis Small-world networks Centrality Motifs Graph theory Scaling Robustness Systems biology Dynamic networks Evolutionary computation Genetic algorithms Genetic programming Artificial life Machine learning Evolutionary developmental biology Artificial intelligence Evolutionary robotics Reaction\u2013diffusion systems Partial differential equations Dissipative structures Percolation Cellular automata Spatial ecology Self-replication Conversation theory Entropy Feedback Goal-oriented Homeostasis Information theory Operationalization Second-order cybernetics Self-reference System dynamics Systems science Systems thinking Sensemaking Variety Ordinary differential equations Phase space Attractors Population dynamics Chaos Multistability Bifurcation Rational choice theory Bounded rationality A complex system is a system composed of many components that interact with one another.",
+      "source_ids": [
+        "S195"
+      ],
+      "category": "factual",
+      "id": 34
+    },
+    {
+      "question": "What is Operating system kernel?",
+      "ground_truth": "A kernel is a computer program at the core of a computer's operating system that always has complete control over everything in the system.",
+      "source_ids": [
+        "S153"
+      ],
+      "category": "factual",
+      "id": 35
+    },
+    {
+      "question": "What is Data science?",
+      "ground_truth": "Data science is an interdisciplinary academic field that uses statistics, scientific computing, scientific methods, processing, scientific visualization, algorithms and systems to extract or extrapolate knowledge from potentially noisy, structured, or unstructured data.",
+      "source_ids": [
+        "S038"
+      ],
+      "category": "factual",
+      "id": 36
+    },
+    {
+      "question": "What is Psychology?",
+      "ground_truth": "Psychology is the scientific study of the mind and behavior.",
+      "source_ids": [
+        "S080"
+      ],
+      "category": "factual",
+      "id": 37
+    },
+    {
+      "question": "What is Statistics?",
+      "ground_truth": "Statistics (from German: Statistik, orig.",
+      "source_ids": [
+        "S033"
+      ],
+      "category": "factual",
+      "id": 38
+    },
+    {
+      "question": "What is Attention?",
+      "ground_truth": "Attention is the concentration of awareness directed at some phenomenon while mostly excluding others.",
+      "source_ids": [
+        "S161"
+      ],
+      "category": "factual",
+      "id": 39
+    },
+    {
+      "question": "What is Indus Valley Civilisation?",
+      "ground_truth": "The Indus Valley Civilisation (IVC), also known as the Indus Civilisation, was a Bronze Age civilisation in the northwestern regions of South Asia, lasting from 3300 BCE to 1300 BCE, and in its mature form from 2600 BCE to 1900 BCE.[a] Together with ancient Egypt and Mesopotamia, it was one of three early civilisations of the Near East and South Asia.",
+      "source_ids": [
+        "S128"
+      ],
+      "category": "factual",
+      "id": 40
+    },
+    {
+      "question": "What is Visual arts?",
+      "ground_truth": "The visual arts are art forms such as painting, drawing, printmaking, sculpture, ceramics, photography, video, image, filmmaking, design, crafts, and architecture.",
+      "source_ids": [
+        "S193"
+      ],
+      "category": "factual",
+      "id": 41
+    },
+    {
+      "question": "What is Astronomy?",
+      "ground_truth": "Astronomy is a natural science that studies celestial objects and the phenomena that occur in the cosmos.",
+      "source_ids": [
+        "S011"
+      ],
+      "category": "factual",
+      "id": 42
+    },
+    {
+      "question": "What is Mesopotamia?",
+      "ground_truth": "Mesopotamia[a] is a historical region of West Asia situated within the Tigris\u2013Euphrates river system, in the northern part of the Fertile Crescent.",
+      "source_ids": [
+        "S129"
+      ],
+      "category": "factual",
+      "id": 43
+    },
+    {
+      "question": "What is Drama?",
+      "ground_truth": "Drama is the specific mode of fiction represented in performance: a play, opera, mime, ballet, etc., performed in a theatre, or on radio or television.",
+      "source_ids": [
+        "S085"
+      ],
+      "category": "factual",
+      "id": 44
+    },
+    {
+      "question": "What is Russia?",
+      "ground_truth": "Russia,[b] or the Russian Federation,[c] is a country in Eastern Europe and North Asia.",
+      "source_ids": [
+        "S106"
+      ],
+      "category": "factual",
+      "id": 45
+    },
+    {
+      "question": "What is Byzantine Empire?",
+      "ground_truth": "The Byzantine Empire, also known as the Eastern Roman Empire, was the continuation of the Roman Empire centred on Constantinople during late antiquity and the Middle Ages.",
+      "source_ids": [
+        "S169"
+      ],
+      "category": "factual",
+      "id": 46
+    },
+    {
+      "question": "What is Australia?",
+      "ground_truth": "Australia, officially the Commonwealth of Australia, is a country comprising the mainland of the Australian continent, the island of Tasmania and numerous smaller islands.[N 6] It has a total area of 7,688,287 km2 (2,968,464 sq mi), making it the sixth-largest country in the world and the largest in Oceania.",
+      "source_ids": [
+        "S105"
+      ],
+      "category": "factual",
+      "id": 47
+    },
+    {
+      "question": "What is Education?",
+      "ground_truth": "Education is the transmission of knowledge and skills and the development of character traits.",
+      "source_ids": [
+        "S081"
+      ],
+      "category": "factual",
+      "id": 48
+    },
+    {
+      "question": "What is Information theory?",
+      "ground_truth": "Information theory is the mathematical study of the quantification, storage, and communication of a particular type of mathematically defined information.",
+      "source_ids": [
+        "S148"
+      ],
+      "category": "factual",
+      "id": 49
+    },
+    {
+      "question": "What is Sound?",
+      "ground_truth": "Sound is a phenomenon in which pressure disturbances propagate through a transmission medium.",
+      "source_ids": [
+        "S053"
+      ],
+      "category": "factual",
+      "id": 50
+    },
+    {
+      "question": "Compare Vaccination and United Nations in one sentence each: what does each describe or study?",
+      "ground_truth": "Vaccination: Vaccination is the administration of a vaccine to help the immune system develop immunity from a disease. United Nations: The United Nations (UN) is a global intergovernmental organization established by the signing of the UN Charter on 26 June 1945 with the articulated mission of maintaining international peace and security, to develop friendly relations among states, to promote international cooperation, and to serve as a centre for harmonizing the actions of states in achieving those goals.",
+      "source_ids": [
+        "S067",
+        "S110"
+      ],
+      "category": "comparative",
+      "id": 51
+    },
+    {
+      "question": "Compare Macroeconomics and Constitution in one sentence each: what does each describe or study?",
+      "ground_truth": "Macroeconomics: Heterodox Macroeconomics is a branch of economics that deals with the performance, structure, behavior, and decision-making of an economy as a whole. Constitution: A constitution, or supreme law, is the aggregate of fundamental principles or established precedents that constitute the legal basis of a polity, organization or other type of entity, and commonly determines how that entity is to be governed.",
+      "source_ids": [
+        "S031",
+        "S112"
+      ],
+      "category": "comparative",
+      "id": 52
+    },
+    {
+      "question": "Compare DNA and Open source in one sentence each: what does each describe or study?",
+      "ground_truth": "DNA: Deoxyribonucleic acid (pronunciation\u24d8; DNA) is a polymer composed of two polynucleotide chains that coil around each other to form a double helix. Open source: Open source is source code that is made freely available for possible modification and redistribution.",
+      "source_ids": [
+        "S014",
+        "S043"
+      ],
+      "category": "comparative",
+      "id": 53
+    },
+    {
+      "question": "Compare Dance and Biology in one sentence each: what does each describe or study?",
+      "ground_truth": "Dance: Dance is an art form, consisting of sequences of body movements with aesthetic and often symbolic value, either improvised or purposefully selected. Biology: Biology is the scientific study of life and living organisms.",
+      "source_ids": [
+        "S096",
+        "S003"
+      ],
+      "category": "comparative",
+      "id": 54
+    },
+    {
+      "question": "Compare Database and Immunology in one sentence each: what does each describe or study?",
+      "ground_truth": "Database: In computing, a database is an organized collection of data or a type of data store based on the use of a database management system (DBMS), the software that interacts with end users, applications, and the database itself to capture and analyze the data. Immunology: Immunology is a branch of biology and medicine that covers the study of immune systems in all organisms.",
+      "source_ids": [
+        "S046",
+        "S065"
+      ],
+      "category": "comparative",
+      "id": 55
+    },
+    {
+      "question": "Compare Consciousness and Popular culture in one sentence each: what does each describe or study?",
+      "ground_truth": "Consciousness: Consciousness is being aware of something internal to one's self or being conscious of states or objects in one's external environment. Popular culture: Popular culture (also called pop culture or mass culture) is generally recognized by members of a society as a set of practices, beliefs, artistic output (also known as popular art [cf.",
+      "source_ids": [
+        "S159",
+        "S191"
+      ],
+      "category": "comparative",
+      "id": 56
+    },
+    {
+      "question": "Compare Monetary policy and Robotics in one sentence each: what does each describe or study?",
+      "ground_truth": "Monetary policy: Heterodox Monetary policy is the policy adopted by the monetary authority of a nation to affect monetary and other financial conditions to accomplish broader objectives like high employment and price stability (normally interpreted as a low and stable rate of inflation). Robotics: Robotics is the interdisciplinary study and practice of the design, construction, operation, and use of robots.",
+      "source_ids": [
+        "S136",
+        "S143"
+      ],
+      "category": "comparative",
+      "id": 57
+    },
+    {
+      "question": "Compare Sustainable economy and Operating system in one sentence each: what does each describe or study?",
+      "ground_truth": "Sustainable economy: Sustainability (from the latin sustinere - hold up, hold upright; furnish with means of support; bear, undergo, endure) is the ability to continue over a long period of time. Operating system: An operating system (OS) is system software that manages computer hardware and software resources, and provides common services for computer programs.",
+      "source_ids": [
+        "S187",
+        "S045"
+      ],
+      "category": "comparative",
+      "id": 58
+    },
+    {
+      "question": "Compare Biotechnology and Water cycle in one sentence each: what does each describe or study?",
+      "ground_truth": "Biotechnology: Biotechnology is a multidisciplinary field that involves the integration of natural sciences and engineering sciences in order to achieve the application of organisms and parts thereof for products and services. Water cycle: The water cycle (or hydrologic cycle or hydrological cycle) is a biogeochemical cycle that involves the continuous change in form of water on, above and below the surface of the Earth across different reservoirs.",
+      "source_ids": [
+        "S121",
+        "S176"
+      ],
+      "category": "comparative",
+      "id": 59
+    },
+    {
+      "question": "Compare Mathematics and Cognitive science in one sentence each: what does each describe or study?",
+      "ground_truth": "Mathematics: Mathematics is a field of study that discovers and organizes methods, theories, and theorems that are developed and proved for the needs of empirical sciences and mathematics itself. Cognitive science: Cognitive science is the interdisciplinary, scientific study of the mind and its processes.",
+      "source_ids": [
+        "S004",
+        "S158"
+      ],
+      "category": "comparative",
+      "id": 60
+    },
+    {
+      "question": "Compare Cell (biology) and Aerospace engineering in one sentence each: what does each describe or study?",
+      "ground_truth": "Cell (biology): The cell is the basic structural and functional unit of all forms of life or organisms. Aerospace engineering: Aerospace engineering is the primary field of engineering concerned with the development of aircraft and spacecraft.",
+      "source_ids": [
+        "S016",
+        "S145"
+      ],
+      "category": "comparative",
+      "id": 61
+    },
+    {
+      "question": "Compare Mughal Empire and Learning in one sentence each: what does each describe or study?",
+      "ground_truth": "Mughal Empire: The Mughal Empire was an early modern empire that ruled most of the Indian subcontinent. Learning: Learning is the process of acquiring new understanding, knowledge, behaviors, skills, values, attitudes, and preferences.",
+      "source_ids": [
+        "S171",
+        "S162"
+      ],
+      "category": "comparative",
+      "id": 62
+    },
+    {
+      "question": "Compare Roman Empire and Globalization in one sentence each: what does each describe or study?",
+      "ground_truth": "Roman Empire: During the classical period, the Roman Empire controlled the Mediterranean and much of Europe, Western Asia, and North Africa. Globalization: Globalization is the process of increasing interdependence and integration among the economies, markets, societies, and cultures of different countries worldwide.",
+      "source_ids": [
+        "S127",
+        "S116"
+      ],
+      "category": "comparative",
+      "id": 63
+    },
+    {
+      "question": "Compare Encryption and Evolution in one sentence each: what does each describe or study?",
+      "ground_truth": "Encryption: In cryptography, encryption (more specifically, encoding) is the process of transforming information in a way that, ideally, only authorized parties can decode. Evolution: Evolution is the change in the heritable characteristics of biological populations over successive generations.",
+      "source_ids": [
+        "S048",
+        "S006"
+      ],
+      "category": "comparative",
+      "id": 64
+    },
+    {
+      "question": "Compare Law and Neural network in one sentence each: what does each describe or study?",
+      "ground_truth": "Law: Law is a set of rules that are created and are enforceable by governmental or societal institutions to regulate behavior, with its precise definition a matter of longstanding debate. Neural network: A neural network is a group of interconnected units called neurons that send signals to one another.",
+      "source_ids": [
+        "S113",
+        "S037"
+      ],
+      "category": "comparative",
+      "id": 65
+    },
+    {
+      "question": "Compare Conservation and Human brain in one sentence each: what does each describe or study?",
+      "ground_truth": "Conservation: Conservation is the preservation or efficient use of resources, or the conservation of various quantities under physical laws. Human brain: The human brain is the central organ of the nervous system, and with the spinal cord, comprises the central nervous system.",
+      "source_ids": [
+        "S062",
+        "S013"
+      ],
+      "category": "comparative",
+      "id": 66
+    },
+    {
+      "question": "Compare Exercise and Complex system in one sentence each: what does each describe or study?",
+      "ground_truth": "Exercise: Exercise or working out is physical activity that enhances or maintains fitness and overall health. Complex system: Collective intelligence Collective action Self-organized criticality Herd mentality Phase transition Agent-based modelling Synchronization Ant colony optimization Particle swarm optimization Swarm behaviour Social network analysis Small-world networks Centrality Motifs Graph theory Scaling Robustness Systems biology Dynamic networks Evolutionary computation Genetic algorithms Genetic programming Artificial life Machine learning Evolutionary developmental biology Artificial intelligence Evolutionary robotics Reaction\u2013diffusion systems Partial differential equations Dissipative structures Percolation Cellular automata Spatial ecology Self-replication Conversation theory Entropy Feedback Goal-oriented Homeostasis Information theory Operationalization Second-order cybernetics Self-reference System dynamics Systems science Systems thinking Sensemaking Variety Ordinary differential equations Phase space Attractors Population dynamics Chaos Multistability Bifurcation Rational choice theory Bounded rationality A complex system is a system composed of many components that interact with one another.",
+      "source_ids": [
+        "S070",
+        "S195"
+      ],
+      "category": "comparative",
+      "id": 67
+    },
+    {
+      "question": "Compare Operating system kernel and Data science in one sentence each: what does each describe or study?",
+      "ground_truth": "Operating system kernel: A kernel is a computer program at the core of a computer's operating system that always has complete control over everything in the system. Data science: Data science is an interdisciplinary academic field that uses statistics, scientific computing, scientific methods, processing, scientific visualization, algorithms and systems to extract or extrapolate knowledge from potentially noisy, structured, or unstructured data.",
+      "source_ids": [
+        "S153",
+        "S038"
+      ],
+      "category": "comparative",
+      "id": 68
+    },
+    {
+      "question": "Compare Psychology and Statistics in one sentence each: what does each describe or study?",
+      "ground_truth": "Psychology: Psychology is the scientific study of the mind and behavior. Statistics: Statistics (from German: Statistik, orig.",
+      "source_ids": [
+        "S080",
+        "S033"
+      ],
+      "category": "comparative",
+      "id": 69
+    },
+    {
+      "question": "Compare Attention and Indus Valley Civilisation in one sentence each: what does each describe or study?",
+      "ground_truth": "Attention: Attention is the concentration of awareness directed at some phenomenon while mostly excluding others. Indus Valley Civilisation: The Indus Valley Civilisation (IVC), also known as the Indus Civilisation, was a Bronze Age civilisation in the northwestern regions of South Asia, lasting from 3300 BCE to 1300 BCE, and in its mature form from 2600 BCE to 1900 BCE.[a] Together with ancient Egypt and Mesopotamia, it was one of three early civilisations of the Near East and South Asia.",
+      "source_ids": [
+        "S161",
+        "S128"
+      ],
+      "category": "comparative",
+      "id": 70
+    },
+    {
+      "question": "Which field is described as a branch of economics that deals with the performance, structure, behavior, and decision-making of an economy as?",
+      "ground_truth": "Macroeconomics",
+      "source_ids": [
+        "S031"
+      ],
+      "category": "inferential",
+      "id": 71
+    },
+    {
+      "question": "Which field is the scientific study of life and living organisms?",
+      "ground_truth": "Biology",
+      "source_ids": [
+        "S003"
+      ],
+      "category": "inferential",
+      "id": 72
+    },
+    {
+      "question": "Which field is described as a branch of biology and medicine that covers the study of immune systems in all organisms?",
+      "ground_truth": "Immunology",
+      "source_ids": [
+        "S065"
+      ],
+      "category": "inferential",
+      "id": 73
+    },
+    {
+      "question": "Which field is described as a field of study that discovers and organizes methods, theories, and theorems that are developed and proved for the?",
+      "ground_truth": "Mathematics",
+      "source_ids": [
+        "S004"
+      ],
+      "category": "inferential",
+      "id": 74
+    },
+    {
+      "question": "Which field is the scientific study of the mind and behavior?",
+      "ground_truth": "Psychology",
+      "source_ids": [
+        "S080"
+      ],
+      "category": "inferential",
+      "id": 75
+    },
+    {
+      "question": "Which field is described as a branch of both computer science and engineering focused on designing, developing, testing, and maintaining software applications,?",
+      "ground_truth": "Software engineering",
+      "source_ids": [
+        "S044"
+      ],
+      "category": "inferential",
+      "id": 76
+    },
+    {
+      "question": "Which field is the scientific study of matter, its fundamental constituents, its motion and behavior through space and time, and the?",
+      "ground_truth": "Physics",
+      "source_ids": [
+        "S001"
+      ],
+      "category": "inferential",
+      "id": 77
+    },
+    {
+      "question": "Which field is described as a branch of anthropology focused on the study of cultural variation among humans?",
+      "ground_truth": "Cultural anthropology",
+      "source_ids": [
+        "S192"
+      ],
+      "category": "inferential",
+      "id": 78
+    },
+    {
+      "question": "Which field is the scientific study of human society that focuses on society, human social behavior, patterns of social relationships, social?",
+      "ground_truth": "Sociology",
+      "source_ids": [
+        "S079"
+      ],
+      "category": "inferential",
+      "id": 79
+    },
+    {
+      "question": "Which field is the study of mathematical models of strategic interactions?",
+      "ground_truth": "Game theory",
+      "source_ids": [
+        "S194"
+      ],
+      "category": "inferential",
+      "id": 80
+    },
+    {
+      "question": "Which field is the study of human activity through the recovery and analysis of material culture?",
+      "ground_truth": "Archaeology",
+      "source_ids": [
+        "S077"
+      ],
+      "category": "inferential",
+      "id": 81
+    },
+    {
+      "question": "Which field is the study of the Earth's atmosphere and its various inner-working physical processes?",
+      "ground_truth": "Atmospheric science",
+      "source_ids": [
+        "S177"
+      ],
+      "category": "inferential",
+      "id": 82
+    },
+    {
+      "question": "Which field is the scientific study of how and why humans grow, change, and adapt across the course of their lives?",
+      "ground_truth": "Developmental psychology",
+      "source_ids": [
+        "S165"
+      ],
+      "category": "inferential",
+      "id": 83
+    },
+    {
+      "question": "Which field is described as a branch of mathematics and statistics concerning events and numerical descriptions of how likely they are to?",
+      "ground_truth": "Probability",
+      "source_ids": [
+        "S034"
+      ],
+      "category": "inferential",
+      "id": 84
+    },
+    {
+      "question": "Which field is the study of genes, genetic variation, and heredity in organisms?",
+      "ground_truth": "Genetics",
+      "source_ids": [
+        "S064"
+      ],
+      "category": "inferential",
+      "id": 85
+    },
+    {
+      "question": "The United Nations article mentions Justice. Using both sources, state what United Nations is and what Justice is.",
+      "ground_truth": "United Nations: The United Nations (UN) is a global intergovernmental organization established by the signing of the UN Charter on 26 June 1945 with the articulated mission of maintaining international peace and security, to develop friendly relations among states, to promote international cooperation, and to serve as a centre for harmonizing the actions of states in achieving those goals. Justice: In its broadest sense, justice is the treatment of individuals fairly.",
+      "source_ids": [
+        "S110",
+        "S114"
+      ],
+      "category": "multi-hop",
+      "id": 86
+    },
+    {
+      "question": "The Macroeconomics article mentions Economics. Using both sources, state what Macroeconomics is and what Economics is.",
+      "ground_truth": "Macroeconomics: Heterodox Macroeconomics is a branch of economics that deals with the performance, structure, behavior, and decision-making of an economy as a whole. Economics: Empirical methods Prescriptive and policy Economics (/\u02cc\u025bk\u0259\u02c8n\u0252m\u026aks, \u02cci\u02d0k\u0259-/) is a social science that studies the production, distribution, and consumption of goods and services.",
+      "source_ids": [
+        "S031",
+        "S030"
+      ],
+      "category": "multi-hop",
+      "id": 87
+    },
+    {
+      "question": "The Macroeconomics article mentions Microeconomics. Using both sources, state what Macroeconomics is and what Microeconomics is.",
+      "ground_truth": "Macroeconomics: Heterodox Macroeconomics is a branch of economics that deals with the performance, structure, behavior, and decision-making of an economy as a whole. Microeconomics: Empirical methods Prescriptive and policy Microeconomics is a branch of economics that studies the behavior of individuals and firms in making decisions regarding the allocation of scarce resources and the interactions among these individuals and firms.",
+      "source_ids": [
+        "S031",
+        "S032"
+      ],
+      "category": "multi-hop",
+      "id": 88
+    },
+    {
+      "question": "The Macroeconomics article mentions Inflation. Using both sources, state what Macroeconomics is and what Inflation is.",
+      "ground_truth": "Macroeconomics: Heterodox Macroeconomics is a branch of economics that deals with the performance, structure, behavior, and decision-making of an economy as a whole. Inflation: Heterodox In economics, inflation is an increase in the average price of goods and services in terms of money.: 579 This increase is measured using a price index, typically a consumer price index (CPI).",
+      "source_ids": [
+        "S031",
+        "S135"
+      ],
+      "category": "multi-hop",
+      "id": 89
+    },
+    {
+      "question": "The Dance article mentions Exercise. Using both sources, state what Dance is and what Exercise is.",
+      "ground_truth": "Dance: Dance is an art form, consisting of sequences of body movements with aesthetic and often symbolic value, either improvised or purposefully selected. Exercise: Exercise or working out is physical activity that enhances or maintains fitness and overall health.",
+      "source_ids": [
+        "S096",
+        "S070"
+      ],
+      "category": "multi-hop",
+      "id": 90
+    },
+    {
+      "question": "The Biology article mentions Evolution. Using both sources, state what Biology is and what Evolution is.",
+      "ground_truth": "Biology: Biology is the scientific study of life and living organisms. Evolution: Evolution is the change in the heritable characteristics of biological populations over successive generations.",
+      "source_ids": [
+        "S003",
+        "S006"
+      ],
+      "category": "multi-hop",
+      "id": 91
+    },
+    {
+      "question": "The Biology article mentions Energy. Using both sources, state what Biology is and what Energy is.",
+      "ground_truth": "Biology: Biology is the scientific study of life and living organisms. Energy: Energy (from Ancient Greek \u1f10\u03bd\u03ad\u03c1\u03b3\u03b5\u03b9\u03b1 (en\u00e9rgeia) 'activity') is the quantitative property that is transferred to a body or to a physical system, recognizable in the performance of work and in the form of heat and light.",
+      "source_ids": [
+        "S003",
+        "S054"
+      ],
+      "category": "multi-hop",
+      "id": 92
+    },
+    {
+      "question": "The Biology article mentions Ecology. Using both sources, state what Biology is and what Ecology is.",
+      "ground_truth": "Biology: Biology is the scientific study of life and living organisms. Ecology: Ecology (from Ancient Greek \u03bf\u1f36\u03ba\u03bf\u03c2 (o\u00eekos) 'house' and -\u03bb\u03bf\u03b3\u03af\u03b1 (-log\u00eda) 'study of')[A] is the natural science of the relationships among living organisms and their environment.",
+      "source_ids": [
+        "S003",
+        "S063"
+      ],
+      "category": "multi-hop",
+      "id": 93
+    },
+    {
+      "question": "The Biology article mentions Genetics. Using both sources, state what Biology is and what Genetics is.",
+      "ground_truth": "Biology: Biology is the scientific study of life and living organisms. Genetics: Genetics is the study of genes, genetic variation, and heredity in organisms.",
+      "source_ids": [
+        "S003",
+        "S064"
+      ],
+      "category": "multi-hop",
+      "id": 94
+    },
+    {
+      "question": "The Biology article mentions Medicine. Using both sources, state what Biology is and what Medicine is.",
+      "ground_truth": "Biology: Biology is the scientific study of life and living organisms. Medicine: Medicine is the science and practice of caring for patients, managing the diagnosis, prognosis, prevention, treatment and palliation of their injury or disease, while promoting their health.",
+      "source_ids": [
+        "S003",
+        "S068"
+      ],
+      "category": "multi-hop",
+      "id": 95
+    },
+    {
+      "question": "The Biology article mentions Biotechnology. Using both sources, state what Biology is and what Biotechnology is.",
+      "ground_truth": "Biology: Biology is the scientific study of life and living organisms. Biotechnology: Biotechnology is a multidisciplinary field that involves the integration of natural sciences and engineering sciences in order to achieve the application of organisms and parts thereof for products and services.",
+      "source_ids": [
+        "S003",
+        "S121"
+      ],
+      "category": "multi-hop",
+      "id": 96
+    },
+    {
+      "question": "The Biology article mentions Environmental science. Using both sources, state what Biology is and what Environmental science is.",
+      "ground_truth": "Biology: Biology is the scientific study of life and living organisms. Environmental science: Environmental science is an academic field that integrates the physical, biological, and mathematical sciences to study the environment and solve environmental problems.",
+      "source_ids": [
+        "S003",
+        "S179"
+      ],
+      "category": "multi-hop",
+      "id": 97
+    },
+    {
+      "question": "The Biology article mentions Evolutionary biology. Using both sources, state what Biology is and what Evolutionary biology is.",
+      "ground_truth": "Biology: Biology is the scientific study of life and living organisms. Evolutionary biology: Evolutionary biology is a subfield of biology that analyzes the four mechanisms of evolution: natural selection, mutation, genetic drift, and gene flow.",
+      "source_ids": [
+        "S003",
+        "S197"
+      ],
+      "category": "multi-hop",
+      "id": 98
+    },
+    {
+      "question": "The Immunology article mentions Biology. Using both sources, state what Immunology is and what Biology is.",
+      "ground_truth": "Immunology: Immunology is a branch of biology and medicine that covers the study of immune systems in all organisms. Biology: Biology is the scientific study of life and living organisms.",
+      "source_ids": [
+        "S065",
+        "S003"
+      ],
+      "category": "multi-hop",
+      "id": 99
+    },
+    {
+      "question": "The Immunology article mentions Medicine. Using both sources, state what Immunology is and what Medicine is.",
+      "ground_truth": "Immunology: Immunology is a branch of biology and medicine that covers the study of immune systems in all organisms. Medicine: Medicine is the science and practice of caring for patients, managing the diagnosis, prognosis, prevention, treatment and palliation of their injury or disease, while promoting their health.",
+      "source_ids": [
+        "S065",
+        "S068"
+      ],
+      "category": "multi-hop",
+      "id": 100
+    }
+  ]
 }

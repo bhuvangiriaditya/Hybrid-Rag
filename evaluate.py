@@ -7,16 +7,20 @@ import os
 
 def load_evaluation_questions(filepath="data/rag_questions.json"):
     """
-    Loads questions from the specified JSON file.
+    Loads questions + metadata from the specified JSON file.
     """
     if not os.path.exists(filepath):
         print(f"Error: {filepath} not found.")
-        return []
+        return {"questions": [], "sources": [], "description": ""}
     
     with open(filepath, 'r') as f:
         data = json.load(f)
     
-    return data.get("questions", [])
+    return {
+        "questions": data.get("questions", []),
+        "sources": data.get("sources", []),
+        "description": data.get("description", "")
+    }
 
 def run_evaluation():
     print("Initializing System for Evaluation...")
@@ -32,7 +36,8 @@ def run_evaluation():
 
     # 2. Load Questions
     print("Loading Questions...")
-    questions = load_evaluation_questions()
+    qa_data = load_evaluation_questions()
+    questions = qa_data.get("questions", [])
     if not questions:
         print("No questions found. Exiting.")
         return
@@ -54,8 +59,11 @@ def run_evaluation():
         retrieved_titles = [c['title'] for c in res.get('context', [])]
         
         results.append({
-            "question_id": q['id'],
-            "question": q['question'],
+            "question_id": q.get('id'),
+            "question": q.get('question'),
+            "ground_truth": q.get('ground_truth'),
+            "category": q.get('category'),
+            "source_ids": q.get('source_ids', []),
             "generated_answer": res.get('answer', "No answer generated"),
             "retrieved_titles": retrieved_titles,
             "latency": latency
@@ -71,6 +79,10 @@ def run_evaluation():
     eval_output_file = "evaluation_results.json"
     with open(eval_output_file, "w") as f:
         json.dump({
+            "metadata": {
+                "question_source": qa_data.get("description", ""),
+                "sources": qa_data.get("sources", [])
+            },
             "metrics": {"avg_latency": avg_latency},
             "details": results
         }, f, indent=2)
