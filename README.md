@@ -21,6 +21,7 @@ Hybrid RAG system combining dense + sparse retrieval with Reciprocal Rank Fusion
 - `evaluate.py`: batch evaluation runner (JSON output)
 - `eval_dashboard.py`: interactive evaluation dashboard
 - `pipeline.py`: single-command automated pipeline (JSON/CSV/HTML/PDF)
+- `generate_questions.py`: question generation script (100 Q&A)
 - `data/`: URLs, scraped corpus, and questions
 
 **Setup**
@@ -54,11 +55,14 @@ Outputs in `reports/`:
 - `evaluation_results.json`
 - `evaluation_results.csv`
 - `report.html`
-- `report.pdf`
+- `report.pdf` (requires `reportlab`)
+ - `plots/` (visualizations)
+ - `screenshots/` (placeholders or real screenshots)
 
 Optional flags:
 - `--no-generate` (skip answer generation)
-- `--ablation` (run ablation grid)
+- `--skip-ablation` (skip ablation grid)
+- `--ablation-generate` (enable answer generation during ablation; slow)
 - `--adversarial-sample N` (default 20)
 - `--mode {hybrid,dense,sparse}` (default hybrid)
 - `--top-k N`, `--top-n N`, `--rrf-k N`
@@ -74,6 +78,30 @@ Optional flags:
 **Adversarial Testing**
 - Paraphrase hit rate: paraphrase query, check if top URL is still correct
 - Unanswerable hallucination rate: unanswerable query, count unsupported answers
+
+**Question Generation**
+```bash
+python3 generate_questions.py
+```
+Regenerates `data/rag_questions.json` and `data/rag_questions.csv` from `data/scraped_fixed.json`.
+
+**Data Requirements**
+- Fixed 200 Wikipedia URLs: `data/fixed_urls.json`
+- Preprocessed corpus: `data/scraped_fixed.json` (or regenerate via `data_loader.py`)
+- 100-question dataset: `data/rag_questions.json` (or regenerate with `generate_questions.py`)
+- 100-question dataset (CSV): `data/rag_questions.csv` (or regenerate with `generate_questions.py`)
+- Evaluation results: `reports/evaluation_results.json` (or regenerate with `pipeline.py`)
+- Vector index: built at runtime by `indexer.py` (regeneration instructions included)
+
+**Submission Packaging**
+Create the required zip:
+```bash
+zip -r Group_<Number>_Hybrid_RAG.zip \
+  app.py data_loader.py indexer.py rag_engine.py evaluate.py eval_dashboard.py pipeline.py generate_questions.py \
+  requirements.txt README.md data \
+  reports
+```
+Replace `<Number>` with your group number.
 
 **Notes**
 - The corpus is stored in `data/scraped_fixed.json`.
