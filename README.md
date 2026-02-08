@@ -11,7 +11,6 @@ Hybrid RAG system combining dense + sparse retrieval with Reciprocal Rank Fusion
 - Adversarial testing (paraphrases, unanswerables)
 - Ablation grid (dense vs sparse vs hybrid)
 - Streamlit dashboard
-- Automated pipeline outputting JSON/CSV/HTML/PDF reports
 
 **Project Layout**
 - `app.py`: Streamlit app with Chat + Evaluation pages (shared index)
@@ -75,9 +74,8 @@ Outputs in `reports/`:
 - `evaluation_results.json`
 - `evaluation_results.csv`
 - `report.html`
-- `report.pdf` (requires `reportlab`)
+- `report.pdf`
 - `plots/` (visualizations)
-- `screenshots/` (placeholders or real screenshots)
 
 Optional flags:
 - `--no-generate` (skip answer generation)
