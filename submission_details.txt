@@ -1,3 +1,5 @@
+Github link - https://github.com/bhuvangiriaditya/Hybrid-Rag
+
 1) Code - All the .py files contribute to the code for the assignment.
     i) data collection - data_loader.py
     ii) preprocessing - indexer.py
