@@ -1,6 +1,7 @@
 import json
 import random
 import re
+import os
 
 
 def clean_text(text):
@@ -25,9 +26,32 @@ def shorten(phrase, max_words=14):
     return " ".join(words[:max_words])
 
 
-def build_questions(corpus_path="data/scraped_fixed.json", out_path="data/rag_questions.json"):
+def load_articles(corpus_path):
     with open(corpus_path, "r") as f:
-        docs = json.load(f)
+        data = json.load(f)
+    # If article-level with chunks
+    if data and isinstance(data, list) and "chunks" in data[0]:
+        articles = []
+        for d in data:
+            if d.get("text"):
+                full_text = d.get("text")
+            else:
+                # Reconstruct from chunks
+                chunks = sorted(d.get("chunks", []), key=lambda c: c.get("chunk_index", 0))
+                full_text = " ".join([c.get("text", "") for c in chunks])
+            articles.append({
+                "title": d.get("title"),
+                "url": d.get("url"),
+                "text": full_text
+            })
+        return articles
+    return data
+
+
+def build_questions(corpus_path="data/scraped_all.json", out_path="data/rag_questions.json"):
+    if not os.path.exists(corpus_path):
+        corpus_path = "data/scraped_fixed.json"
+    docs = load_articles(corpus_path)
 
     sources = []
     for i, d in enumerate(docs, start=1):

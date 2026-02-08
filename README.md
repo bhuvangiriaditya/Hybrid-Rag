@@ -14,12 +14,12 @@ Hybrid RAG system combining dense + sparse retrieval with Reciprocal Rank Fusion
 - Automated pipeline outputting JSON/CSV/HTML/PDF reports
 
 **Project Layout**
-- `app.py`: Streamlit demo app
+- `app.py`: Streamlit app with Chat + Evaluation pages (shared index)
 - `data_loader.py`: data acquisition and scraping
 - `indexer.py`: chunking, BM25, FAISS
 - `rag_engine.py`: retrieval, fusion, generation
 - `evaluate.py`: batch evaluation runner (JSON output)
-- `eval_dashboard.py`: interactive evaluation dashboard
+- `eval_dashboard.py`: evaluation dashboard (also usable standalone)
 - `pipeline.py`: single-command automated pipeline (JSON/CSV/HTML/PDF)
 - `generate_questions.py`: question generation script (100 Q&A)
 - `data/`: URLs, scraped corpus, and questions
@@ -46,6 +46,7 @@ Outputs: `evaluation_results.json`
 ```bash
 streamlit run eval_dashboard.py
 ```
+Note: The Evaluation page is also available inside `app.py`.
 
 **Run the Automated Pipeline**
 ```bash
@@ -56,8 +57,8 @@ Outputs in `reports/`:
 - `evaluation_results.csv`
 - `report.html`
 - `report.pdf` (requires `reportlab`)
- - `plots/` (visualizations)
- - `screenshots/` (placeholders or real screenshots)
+- `plots/` (visualizations)
+- `screenshots/` (placeholders or real screenshots)
 
 Optional flags:
 - `--no-generate` (skip answer generation)
@@ -83,26 +84,18 @@ Optional flags:
 ```bash
 python3 generate_questions.py
 ```
-Regenerates `data/rag_questions.json` and `data/rag_questions.csv` from `data/scraped_fixed.json`.
+Regenerates `data/rag_questions.json` and `data/rag_questions.csv` from `data/scraped_all.json` (falls back to `data/scraped_fixed.json` if needed).
 
 **Data Requirements**
 - Fixed 200 Wikipedia URLs: `data/fixed_urls.json`
-- Preprocessed corpus: `data/scraped_fixed.json` (or regenerate via `data_loader.py`)
+- Preprocessed corpus (fixed): `data/scraped_fixed.json`
+- Preprocessed corpus (random): `data/scraped_random.json`
+- Combined corpus (all 500, chunked): `data/scraped_all.json`
 - 100-question dataset: `data/rag_questions.json` (or regenerate with `generate_questions.py`)
 - 100-question dataset (CSV): `data/rag_questions.csv` (or regenerate with `generate_questions.py`)
 - Evaluation results: `reports/evaluation_results.json` (or regenerate with `pipeline.py`)
 - Vector index: built at runtime by `indexer.py` (regeneration instructions included)
 
-**Submission Packaging**
-Create the required zip:
-```bash
-zip -r Group_<Number>_Hybrid_RAG.zip \
-  app.py data_loader.py indexer.py rag_engine.py evaluate.py eval_dashboard.py pipeline.py generate_questions.py \
-  requirements.txt README.md data \
-  reports
-```
-Replace `<Number>` with your group number.
-
 **Notes**
-- The corpus is stored in `data/scraped_fixed.json`.
+- The combined corpus is stored in `data/scraped_all.json`.
 - `data/rag_questions.json` includes ground-truth answers and source IDs.

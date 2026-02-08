@@ -40,19 +40,34 @@ class Indexer:
         self.chunks = []
         self.tokenized_corpus = []
         
+        pre_chunked = bool(documents) and ("chunk_id" in documents[0])
+
         # 1. Chunking
         print("Chunking documents...")
-        for doc in documents:
-            doc_chunks = self.chunk_text(doc['text'])
-            for i, chunk_text in enumerate(doc_chunks):
+        if pre_chunked:
+            for doc in documents:
                 self.chunks.append({
-                    "id": f"{doc['title']}_{i}",
-                    "title": doc['title'],
-                    "url": doc['url'],
-                    "text": chunk_text
+                    "id": doc.get("chunk_id"),
+                    "title": doc.get("title"),
+                    "url": doc.get("url"),
+                    "text": doc.get("text"),
+                    "source": doc.get("source"),
+                    "url_id": doc.get("url_id"),
+                    "chunk_index": doc.get("chunk_index")
                 })
-                # For BM25
-                self.tokenized_corpus.append(chunk_text.lower().split())
+                self.tokenized_corpus.append(doc.get("text", "").lower().split())
+        else:
+            for doc in documents:
+                doc_chunks = self.chunk_text(doc['text'])
+                for i, chunk_text in enumerate(doc_chunks):
+                    self.chunks.append({
+                        "id": f"{doc['title']}_{i}",
+                        "title": doc['title'],
+                        "url": doc['url'],
+                        "text": chunk_text
+                    })
+                    # For BM25
+                    self.tokenized_corpus.append(chunk_text.lower().split())
 
         # 2. Build Sparse Index (BM25)
         print("Building BM25 Index...")

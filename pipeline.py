@@ -684,7 +684,7 @@ def write_html_report(path, summary):
 
     if ablation:
         html.append("<div class='section'><h2>Ablation Grid (Summary)</h2><table>")
-        html.append("<tr><th>mode</th><th>top_k</th><th>top_n</th><th>rrf_k</th><th>mrr_url</th><th>precision_at_5_url</th><th>answer_f1</th><th>contextual_precision</th></tr>")
+        html.append("<tr><th>mode</th><th>top_k</th><th>top_n</th><th>rrf_k</th><th>mrr_url</th><th>precision_at_5_url</th></tr>")
         for row in ablation:
             html.append(
                 "<tr>"
@@ -694,8 +694,6 @@ def write_html_report(path, summary):
                 f"<td>{row['rrf_k']}</td>"
                 f"<td>{row['mrr_url']:.4f}</td>"
                 f"<td>{row['precision_at_5_url']:.4f}</td>"
-                f"<td>{row['answer_f1']:.4f}</td>"
-                f"<td>{row['contextual_precision']:.4f}</td>"
                 "</tr>"
             )
         html.append("</table></div>")

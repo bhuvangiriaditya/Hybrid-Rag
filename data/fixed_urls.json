@@ -1,7 +1,7 @@
 {
     "group_name": "fixed",
     "description": "Fixed Wikipedia URL set for corpus generation. These URLs remain constant across indexing runs.",
-    "total_urls": 270,
+    "total_urls": 200,
     "urls": [
         "https://en.wikipedia.org/wiki/Physics",
         "https://en.wikipedia.org/wiki/Chemistry",
@@ -201,6 +201,7 @@
         "https://en.wikipedia.org/wiki/Network_science",
         "https://en.wikipedia.org/wiki/Evolutionary_biology",
         "https://en.wikipedia.org/wiki/Urbanization",
-        "https://en.wikipedia.org/wiki/Space_exploration"
+        "https://en.wikipedia.org/wiki/Space_exploration",
+        "https://en.wikipedia.org/wiki/Bengaluru"
     ]
 }
