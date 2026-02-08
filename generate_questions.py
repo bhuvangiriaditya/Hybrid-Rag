@@ -42,7 +42,8 @@ def load_articles(corpus_path):
             articles.append({
                 "title": d.get("title"),
                 "url": d.get("url"),
-                "text": full_text
+                "text": full_text,
+                "chunks": d.get("chunks", [])
             })
         return articles
     return data
@@ -62,6 +63,15 @@ def build_questions(corpus_path="data/scraped_all.json", out_path="data/rag_ques
         })
     id_by_title = {s["title"]: s["id"] for s in sources}
 
+    def get_relevant_chunk(doc):
+        chunks = doc.get("chunks", [])
+        if chunks:
+            chunks = sorted(chunks, key=lambda c: c.get("chunk_index", 0))
+            first = chunks[0]
+            return first.get("text", ""), first.get("chunk_id")
+        # Fallback to short snippet if chunks missing
+        return first_sentence(doc.get("text", "")), None
+
     random.seed(42)
     random.shuffle(docs)
 
@@ -73,10 +83,13 @@ def build_questions(corpus_path="data/scraped_all.json", out_path="data/rag_ques
             break
         title = d["title"]
         q = f"What is {title}?"
-        a = first_sentence(d["text"])
+        expected = first_sentence(d["text"])
+        chunk_text, chunk_id = get_relevant_chunk(d)
         questions.append({
             "question": q,
-            "ground_truth": a,
+            "ground_truth": chunk_text,
+            "expected_answer": expected,
+            "ground_truth_chunk_ids": [chunk_id] if chunk_id else [],
             "source_ids": [id_by_title[title]],
             "category": "factual",
         })
@@ -98,10 +111,15 @@ def build_questions(corpus_path="data/scraped_all.json", out_path="data/rag_ques
         )
         a1 = first_sentence(d1["text"])
         a2 = first_sentence(d2["text"])
-        a = f"{d1['title']}: {a1} {d2['title']}: {a2}"
+        expected = f"{d1['title']}: {a1} {d2['title']}: {a2}"
+        c1, c1_id = get_relevant_chunk(d1)
+        c2, c2_id = get_relevant_chunk(d2)
+        chunk_text = f"{d1['title']}: {c1} {d2['title']}: {c2}"
         questions.append({
             "question": q,
-            "ground_truth": a,
+            "ground_truth": chunk_text,
+            "expected_answer": expected,
+            "ground_truth_chunk_ids": [c1_id, c2_id],
             "source_ids": [id_by_title[d1["title"]], id_by_title[d2["title"]]],
             "category": "comparative",
         })
@@ -137,9 +155,12 @@ def build_questions(corpus_path="data/scraped_all.json", out_path="data/rag_ques
         if q in seen_q:
             continue
         seen_q.add(q)
+        chunk_text, chunk_id = get_relevant_chunk(d)
         questions.append({
             "question": q,
-            "ground_truth": d["title"],
+            "ground_truth": chunk_text,
+            "expected_answer": d["title"],
+            "ground_truth_chunk_ids": [chunk_id] if chunk_id else [],
             "source_ids": [id_by_title[d["title"]]],
             "category": "inferential",
         })
@@ -151,9 +172,12 @@ def build_questions(corpus_path="data/scraped_all.json", out_path="data/rag_ques
         if q in seen_q:
             continue
         seen_q.add(q)
+        chunk_text, chunk_id = get_relevant_chunk(d)
         questions.append({
             "question": q,
-            "ground_truth": d["title"],
+            "ground_truth": chunk_text,
+            "expected_answer": d["title"],
+            "ground_truth_chunk_ids": [chunk_id] if chunk_id else [],
             "source_ids": [id_by_title[d["title"]]],
             "category": "inferential",
         })
@@ -188,10 +212,15 @@ def build_questions(corpus_path="data/scraped_all.json", out_path="data/rag_ques
         )
         a1 = first_sentence(d1["text"])
         a2 = first_sentence(d2["text"])
-        a = f"{d1['title']}: {a1} {d2['title']}: {a2}"
+        expected = f"{d1['title']}: {a1} {d2['title']}: {a2}"
+        c1, c1_id = get_relevant_chunk(d1)
+        c2, c2_id = get_relevant_chunk(d2)
+        chunk_text = f"{d1['title']}: {c1} {d2['title']}: {c2}"
         questions.append({
             "question": q,
-            "ground_truth": a,
+            "ground_truth": chunk_text,
+            "expected_answer": expected,
+            "ground_truth_chunk_ids": [c1_id, c2_id],
             "source_ids": [id_by_title[d1["title"]], id_by_title[d2["title"]]],
             "category": "multi-hop",
         })
@@ -207,10 +236,13 @@ def build_questions(corpus_path="data/scraped_all.json", out_path="data/rag_ques
                 break
             title = d["title"]
             q = f"What is {title}?"
-            a = first_sentence(d["text"])
+            expected = first_sentence(d["text"])
+            chunk_text, chunk_id = get_relevant_chunk(d)
             questions.append({
                 "question": q,
-                "ground_truth": a,
+                "ground_truth": chunk_text,
+                "expected_answer": expected,
+                "ground_truth_chunk_ids": [chunk_id] if chunk_id else [],
                 "source_ids": [id_by_title[title]],
                 "category": "factual",
             })
@@ -231,14 +263,17 @@ def build_questions(corpus_path="data/scraped_all.json", out_path="data/rag_ques
 
     csv_path = out_path.replace(".json", ".csv")
     with open(csv_path, "w") as f:
-        f.write("id,category,question,ground_truth,source_ids\n")
+        f.write("id,category,question,ground_truth,expected_answer,ground_truth_chunk_ids,source_ids\n")
         for q in questions:
             source_ids = "|".join(q.get("source_ids", []))
+            chunk_ids = "|".join(q.get("ground_truth_chunk_ids", []))
             row = [
                 str(q.get("id", "")),
                 q.get("category", "").replace(",", " "),
                 q.get("question", "").replace(",", " "),
                 q.get("ground_truth", "").replace(",", " "),
+                q.get("expected_answer", "").replace(",", " "),
+                chunk_ids.replace(",", " "),
                 source_ids.replace(",", " "),
             ]
             f.write(",".join(row) + "\n")

@@ -118,13 +118,15 @@ def run_evaluation():
         else:
             precision_at_5_sum += 0.0
 
-        # Answer F1
-        f1_sum += token_f1(res.get('answer', ''), q.get('ground_truth', ''))
+        # Answer F1 (prefer expected_answer if available)
+        expected_answer = q.get('expected_answer', q.get('ground_truth', ''))
+        f1_sum += token_f1(res.get('answer', ''), expected_answer)
         
         results.append({
             "question_id": q.get('id'),
             "question": q.get('question'),
             "ground_truth": q.get('ground_truth'),
+            "expected_answer": expected_answer,
             "category": q.get('category'),
             "source_ids": q.get('source_ids', []),
             "generated_answer": res.get('answer', "No answer generated"),

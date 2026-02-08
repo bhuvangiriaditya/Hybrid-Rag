@@ -1,0 +1,26 @@
+1) Code - All the .py files contribute to the code for the assignment.
+    i) data collection - data_loader.py
+    ii) preprocessing - indexer.py
+    iii) dense/sparse retrieval,RRF,Generation - rag_engine.py
+    iv) entire pipeline - pipeline.py
+
+2) Evaluation
+    i) 100-question dataset - rag_questions.json/rag_questions.csv
+    ii) evaluation pipeline, metrics implementation, Report generations - pipeline.py
+    iii) Dashboard for evaluation and metrics - app.py
+
+3) Report - Report.pdf
+
+4) Interface - streamlit run app.py (Detailed instructions - refer Readme.md)
+
+5) Readme.md - Verify in the file contents
+
+6) Data
+    i) Fixed 200 fixed_urls - fixed_urls.json
+    ii) Preprocessed corpus - scrapped_fixed.json
+    iii) 100 question dataset - rag_questions.csv/rag_questions.json (use generate_questions.py to regenerate questions).
+    iv) Evaluation results
+        a) Detailed Results - evaluation_results.json
+        b) Response and evaluation details per question - evaluation_results.csv
+        c) (2.5 - Evaluation Report Contents) - report.html
+        d) To regenerate all - python3 pipeline.py

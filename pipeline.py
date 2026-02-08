@@ -181,7 +181,8 @@ def evaluate_questions(questions, sources, rag, mode, top_k, top_n, rrf_k, gener
         hits = sum(1 for url in top_k_urls if url in correct_urls) if correct_urls else 0
         precision_at_5_sum += hits / k
 
-        f1 = token_f1(answer, q.get("ground_truth", "")) if generate_answers else 0.0
+        expected_answer = q.get("expected_answer", q.get("ground_truth", ""))
+        f1 = token_f1(answer, expected_answer) if generate_answers else 0.0
         f1_sum += f1
 
         cp = contextual_precision(answer, context) if generate_answers else 0.0
@@ -194,6 +195,7 @@ def evaluate_questions(questions, sources, rag, mode, top_k, top_n, rrf_k, gener
             "question": q.get("question"),
             "category": q.get("category"),
             "ground_truth": q.get("ground_truth"),
+            "expected_answer": expected_answer,
             "source_ids": q.get("source_ids", []),
             "generated_answer": answer,
             "retrieved_urls": retrieved_urls,
@@ -264,7 +266,8 @@ def evaluate_hybrid_rrf_list(questions, sources, rag, top_k, top_n, rrf_ks, gene
             hits = sum(1 for url in top_k_urls if url in correct_urls) if correct_urls else 0
             sums[rrf_k]["precision_at_5_sum"] += hits / k
 
-            f1 = token_f1(answer, q.get("ground_truth", "")) if generate_answers else 0.0
+            expected_answer = q.get("expected_answer", q.get("ground_truth", ""))
+            f1 = token_f1(answer, expected_answer) if generate_answers else 0.0
             sums[rrf_k]["f1_sum"] += f1
 
             cp = contextual_precision(answer, context) if generate_answers else 0.0
@@ -558,16 +561,15 @@ def ensure_screenshots(output_dir):
     shots_dir = os.path.join(output_dir, "screenshots")
     ensure_dir(shots_dir)
     existing = sorted([f for f in os.listdir(shots_dir) if f.endswith(".png")])
-    if len(existing) >= 3:
-        return [os.path.join("screenshots", f) for f in existing[:3]]
-    for i in range(len(existing) + 1, 4):
-        fig, ax = plt.subplots(figsize=(6, 3))
-        ax.axis("off")
-        ax.text(0.5, 0.5, f"Screenshot Placeholder {i}", ha="center", va="center", fontsize=14)
-        filename = f"screenshot_{i}.png"
-        save_plot(fig, os.path.join(shots_dir, filename))
-    existing = sorted([f for f in os.listdir(shots_dir) if f.endswith(".png")])
-    return [os.path.join("screenshots", f) for f in existing[:3]]
+    if not existing:
+        for i in range(1, 4):
+            fig, ax = plt.subplots(figsize=(6, 3))
+            ax.axis("off")
+            ax.text(0.5, 0.5, f"Screenshot Placeholder {i}", ha="center", va="center", fontsize=14)
+            filename = f"screenshot_{i}.png"
+            save_plot(fig, os.path.join(shots_dir, filename))
+        existing = sorted([f for f in os.listdir(shots_dir) if f.endswith(".png")])
+    return [os.path.join("screenshots", f) for f in existing]
 
 
 def collect_error_examples(results, labels, max_per_type=3):
@@ -762,8 +764,16 @@ def write_pdf_report(path, summary):
         line(f"{k}: {summary.get('metrics', {}).get(k, 0.0):.4f}")
     line("")
     line("Custom Metrics Justification", bold=True)
+    line("Precision@5 (URL-level)", bold=True)
+    line("Why: retrieval quality in the small window that feeds the generator.")
+    line("How: count correct URLs in top-5 unique URLs, divide by 5, average.")
+    line("Interpretation: higher is better; 0.6 ≈ 3/5 URLs relevant.")
+    line("")
+    line("Answer F1 (token overlap)", bold=True)
+    line("Why: captures answer quality with partial credit.")
+    line("How: tokenize; precision/recall on overlap; F1 = 2PR/(P+R).")
+    line("Interpretation: higher is better; 1.0 = perfect lexical match.")
     line("Answer F1: precision/recall overlap; F1 = 2PR/(P+R).")
-    line("Contextual Precision: |answer tokens ∩ context tokens| / |answer tokens|.")
     line("")
 
     plots = summary.get("plots", {})
@@ -778,6 +788,10 @@ def write_pdf_report(path, summary):
 
     line("Adversarial Testing", bold=True)
     adv = summary.get("adversarial", {})
+    line("Innovative study for adversarial testing:", bold=True)
+    line("We stress-test retrieval and generation with paraphrases and unanswerable variants.")
+    line("Paraphrase tests check robustness of URL ranking; unanswerables probe hallucination risk.")
+    line("A response is flagged hallucinated if it is non-empty but poorly grounded in context.")
     line(f"paraphrase_hit_rate: {adv.get('paraphrase_hit_rate', 0.0):.4f}")
     line(f"unanswerable_hallucination_rate: {adv.get('unanswerable_hallucination_rate', 0.0):.4f}")
     line("")

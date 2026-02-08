@@ -242,7 +242,8 @@ def evaluate_questions(questions, sources, mode, top_k, top_n, rrf_k, generate_a
         hits = sum(1 for url in top_k_urls if url in correct_urls) if correct_urls else 0
         precision_at_5_sum += hits / k
 
-        f1 = token_f1(answer, q.get("ground_truth", "")) if generate_answers else 0.0
+        expected_answer = q.get("expected_answer", q.get("ground_truth", ""))
+        f1 = token_f1(answer, expected_answer) if generate_answers else 0.0
         f1_sum += f1
 
         cp = contextual_precision(answer, context) if generate_answers else 0.0
@@ -255,6 +256,7 @@ def evaluate_questions(questions, sources, mode, top_k, top_n, rrf_k, generate_a
             "question": q.get("question"),
             "category": q.get("category"),
             "ground_truth": q.get("ground_truth"),
+            "expected_answer": expected_answer,
             "source_ids": q.get("source_ids", []),
             "generated_answer": answer,
             "retrieved_urls": retrieved_urls,
@@ -377,7 +379,7 @@ def render_eval_dashboard():
         "Adversarial Testing",
         "Ablation Study",
         "Error Analysis",
-        "LLM-as-Judge",
+        # "LLM-as-Judge",
         "Calibration"
     ])
 
@@ -505,33 +507,48 @@ def render_eval_dashboard():
             "Top-K, Top-N, and RRF k."
         )
         st.caption(
-            "Grid settings: modes = {dense, sparse, hybrid}; Top-K = {3, 5, 8}; "
-            "Top-N = {3, 5}; RRF k = {30, 60}. "
+            "Grid settings: Dense/Sparse use Top-K = {3, 5, 8} with Top-N=None (not used). "
+            "Hybrid uses Top-K = {3, 5, 8}, Top-N = {3, 5}, RRF k = {30, 60}. "
             "When 'Include answer generation' is enabled, the LLM is run for every combination, so "
             "this can be slow."
         )
         ablate_generate = st.checkbox("Include answer generation in ablation (slow)", value=False)
         if st.button("Run Ablation Grid"):
-            grid_modes = ["dense", "sparse", "hybrid"]
-            grid_k = [3, 5, 8]
-            grid_n = [3, 5]
-            grid_rrf = [30, 60]
             rows = []
-            for m in grid_modes:
-                for k in grid_k:
-                    for n in grid_n:
-                        for rk in grid_rrf:
-                            met, _ = evaluate_questions(
-                                questions, sources, m, k, n, rk, ablate_generate
-                            )
-                            rows.append({
-                                "mode": m,
-                                "top_k": k,
-                                "top_n": n,
-                                "rrf_k": rk,
-                                "mrr_url": met.get("mrr_url", 0.0),
-                                "precision_at_5_url": met.get("precision_at_5_url", 0.0)
-                            })
+            # Dense + Sparse (Top-N not used, so display None; evaluate with top_n=top_k)
+            for m in ["dense", "sparse"]:
+                for k in [3, 5, 8]:
+                    met, _ = evaluate_questions(
+                        questions, sources, m, k, k, 60, ablate_generate
+                    )
+                    rows.append({
+                        "mode": m,
+                        "top_k": k,
+                        "top_n": None,
+                        "rrf_k": None,
+                        "mrr_url": met.get("mrr_url", 0.0),
+                        "precision_at_5_url": met.get("precision_at_5_url", 0.0),
+                        "answer_f1": met.get("answer_f1", 0.0),
+                        "contextual_precision": met.get("contextual_precision", 0.0),
+                    })
+
+            # Hybrid (Top-N + RRF k apply)
+            for k in [3, 5, 8]:
+                for n in [3, 5]:
+                    for rk in [30, 60]:
+                        met, _ = evaluate_questions(
+                            questions, sources, "hybrid", k, n, rk, ablate_generate
+                        )
+                        rows.append({
+                            "mode": "hybrid",
+                            "top_k": k,
+                            "top_n": n,
+                            "rrf_k": rk,
+                            "mrr_url": met.get("mrr_url", 0.0),
+                            "precision_at_5_url": met.get("precision_at_5_url", 0.0),
+                            "answer_f1": met.get("answer_f1", 0.0),
+                            "contextual_precision": met.get("contextual_precision", 0.0),
+                        })
             st.session_state["ablation_rows"] = rows
 
         if "ablation_rows" in st.session_state:
@@ -540,6 +557,12 @@ def render_eval_dashboard():
     with tabs[4]:
         st.subheader("Error Analysis")
         if results:
+            st.caption(
+                "Failure labels: retrieval_failure = no correct URL found; "
+                "context_failure = low contextual precision; "
+                "generation_failure = correct URL found but low Answer F1; "
+                "success = correct URL found and answer quality above threshold."
+            )
             labels = build_error_labels(results)
             by_cat = defaultdict(Counter)
             for r, label in zip(results, labels):
